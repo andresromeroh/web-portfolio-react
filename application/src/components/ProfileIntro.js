@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import StandardButton from '../shared/StandardButton';
-import Avatar from '../assets/images/avatar.jpg';
+import Avatar from '../assets/images/development.png';
 
 export default class ProfileIntro extends Component {
     render() {
@@ -10,9 +10,6 @@ export default class ProfileIntro extends Component {
             <section className="portfolio-block block-intro" style={{ paddingBottom: "15px" }}>
                 <Container>
                     <Row>
-                        <Col sm="12" md="6" lg="6" xl="6">
-                            <img className="avatar" src={Avatar} alt="Avatar" />
-                        </Col>
                         <Col sm="12" md="6" lg="6" xl="6">
                             <Row>
                                 <Col>
@@ -35,6 +32,9 @@ export default class ProfileIntro extends Component {
                                     />
                                 </Col>
                             </Row>
+                        </Col>
+                        <Col sm="12" md="6" lg="6" xl="6">
+                            <img className="avatar" src={Avatar} alt="Avatar" />
                         </Col>
                     </Row>
                 </Container>

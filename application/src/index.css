@@ -50,11 +50,9 @@ body {
 }
 
 .avatar {
-  width: 180px;
-  height: 180px;
+  /* width: 500px;
+  height: 200px; */
   border-width: initial;
-  border-radius: 100px;
-  margin-top: 30px !important;
   display: block;
   margin: auto;
 }
@@ -94,6 +92,13 @@ body {
   color: #fff !important;
   background-color: #f45b69 !important;
   border-color: #f45b69 !important;
+}
+
+/* SkillSet */
+
+.skill-set {
+  padding-bottom: 100px;
+  padding-top: 20px;
 }
 
 .special-skill-item .icon {
