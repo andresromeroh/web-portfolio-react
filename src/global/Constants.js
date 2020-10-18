@@ -4,7 +4,7 @@ export const BACKEND_DESCRIPTION =
 
 export const FRONTEND_DESCRIPTION =
     `Either you need someone able to work with the latest frontend libraries like 
-    React and Redux, or someone to work with plain Javascript, HTML &amp; CSS I got you covered.`;
+    React and Redux, or someone to work with plain Javascript, HTML & CSS I got you covered.`;
 
 export const CLOUD_DESCRIPTION =
     `Want to implement cloud native applications? I've worked with some of the most popular

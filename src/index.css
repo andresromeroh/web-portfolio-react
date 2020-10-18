@@ -24,14 +24,14 @@ body {
 /* ProfileIntro */
 
 .portfolio-block {
-  padding-bottom: 80px;
-  padding-top: 80px;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 @media (min-width: 768px) {
   .portfolio-block {
-    padding-bottom: 80px;
-    padding-top: 80px;
+    padding-bottom: 50px;
+    padding-top: 50px;
   }
 }
 
@@ -96,7 +96,7 @@ body {
 /* SkillSet */
 
 .skill-set {
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   padding-top: 20px;
 }
 

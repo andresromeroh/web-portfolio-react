@@ -9,7 +9,8 @@ const StyledStrong = styled.strong`
     color: #028090
 `
 const StyledH2 = styled.h2`
-    padding-bottom: 30px
+    padding-bottom: 30px;
+    margin-left: 2%
 `
 
 export default class SkillSet extends Component {
