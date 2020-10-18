@@ -1,7 +1,24 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProjectCard from '../shared/ProjectCard';
+import wait from 'waait';
 import RepositoryService from '../services/Repository.service';
+import { css } from "@emotion/core";
+import PuffLoader from "react-spinners/PuffLoader";
+import styled, { keyframes } from 'styled-components';
+import { fadeIn } from 'react-animations';
+
+const fadeInAnimation = keyframes`${fadeIn}`;
+const FadeInDiv = styled.div`animation: 1s ${fadeInAnimation};`;
+const StyledStrong = styled.strong`color: #028090`;
+const StyledH2 = styled.h2`padding: 30px 0 30px 0`;
+
+const spinnercss = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+  margin-top: 5%;
+`;
 
 export default class Projects extends Component {
 
@@ -9,34 +26,58 @@ export default class Projects extends Component {
         super(props)
 
         this.state = {
-            projects: []
+            repositories: [],
+            isLoading: true
         }
     }
 
     componentDidMount = async () => {
-        const projects = await RepositoryService.findAllPublic();
-        console.log(projects);
+        const repositories = await RepositoryService.findAllPublic();
+        await wait(1000); // little delay for the spinner...
+        this.setState({ repositories, isLoading: false });
+    }
+
+    getRepositories = () => {
+        const { repositories } = this.state;
+        if (!repositories.length) {
+            return [];
+        } else {
+            const jsx = repositories.map((repo, index) =>
+                <Col md='6' lg='4' key={index}>
+                    <ProjectCard
+                        title={repo.name.replaceAll('-', ' ').toUpperCase()}
+                        description={repo.description}
+                        language={repo.language}
+                        url={repo.htmlUrl}
+                    />
+                </Col>
+            );
+
+            return jsx;
+        }
     }
 
     render() {
         return (
             <React.Fragment>
                 <Container className="portfolio-block project-no-images">
-                    <div className='heading' style={{ paddingTop: '30px', paddingBottom: '30px' }}>
-                        <h2>GitHub Projects</h2>
-                    </div>
-                    <Row>
-                        <Col md='6' lg='4'>
-                            <ProjectCard
-                                title='Markov'
-                                description='Lorem Ipsum'
-                                language='Python'
-                                url='google.com'
-                            />
-                        </Col>
-                    </Row>
+                    <StyledH2>
+                        <StyledStrong>G</StyledStrong>itHub Projects
+                    </StyledH2>
+                    {this.state.isLoading ?
+                        <PuffLoader
+                            css={spinnercss}
+                            size={100}
+                            color={"#f45b69"}
+                            loading={this.state.loading}
+                        /> : // if else ...
+                        <FadeInDiv>
+                            <Row>
+                                {this.getRepositories()}
+                            </Row>
+                        </FadeInDiv>}
                 </Container>
-            </React.Fragment>
+            </React.Fragment >
         )
     }
 }

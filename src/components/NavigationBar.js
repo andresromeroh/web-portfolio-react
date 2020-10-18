@@ -6,9 +6,9 @@ export default class NavigationBar extends Component {
     render() {
         return (
             <div>
-                <Navbar className='portfolio-navbar gradient' expand='lg' fixed='top'  >
+                <Navbar className='portfolio-navbar gradient' expand='lg' fixed='top'>
                     <Container>
-                        <Navbar.Brand className='logo brand' href='#'>
+                        <Navbar.Brand className='logo brand' href='/'>
                             <span role='img' aria-label='computer'>💻 andresromero.dev</span>
                         </Navbar.Brand>
                         <Navbar.Toggle />

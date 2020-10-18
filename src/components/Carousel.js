@@ -2,6 +2,14 @@ import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { Container, Row } from 'react-bootstrap';
+import styled from 'styled-components';
+
+const StyledStrong = styled.strong`
+    color: #028090
+`
+const StyledH2 = styled.h2`
+    padding-bottom: 50px
+`
 
 const responsive = {
     0: { items: 4 },
@@ -23,9 +31,9 @@ const items = [
 const Carousel = () => (
     <Container className='mobile-hide'>
         <Row>
-            <div className='heading' style={{ paddingBottom: '50px' }}>
-                <h2>Badges & Certifications</h2>
-            </div>
+            <StyledH2>
+                <StyledStrong>C</StyledStrong>ertifications & Badges
+            </StyledH2>
         </Row>
         <AliceCarousel
             animationDuration={2000}

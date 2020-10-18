@@ -1,28 +1,30 @@
 import React, { Component } from 'react'
 import { Container } from 'react-bootstrap';
+import styled from 'styled-components';
 
-const footStyle = {
-    fontFamily: 'Montserrat, sans-serif',
-    textAlign: 'center',
-    marginTop: '50px',
-    marginBottom: '40px'
-};
-
-const anchorStyle = {
-    marginRight: '50px'
-};
+const StyledFooter = styled.footer`
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+`
+const Anchor = styled.a`
+    margin-right: 50px
+`
 
 export default class Footer extends Component {
     render() {
         return (
-            <Container className='page-footer' style={footStyle}>
-                <hr></hr>
-                <div className='links'>
-                    <a href='/about' style={anchorStyle}>About</a>
-                    <a href='/projects' style={anchorStyle}>Projects</a>
-                    <a href='/contact' style={anchorStyle}>Email</a>
-                    <a href='/projects' style={anchorStyle}>GitHub</a>
-                </div>
+            <Container>
+                <StyledFooter>
+                    <hr></hr>
+                    <div className='links'>
+                        <Anchor href='/'>About</Anchor>
+                        <Anchor href='/projects'>Projects</Anchor>
+                        <Anchor href='/contact'>Email</Anchor>
+                        <Anchor href='/projects'>GitHub</Anchor>
+                    </div>
+                </StyledFooter>
             </Container>
         )
     }
