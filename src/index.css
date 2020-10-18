@@ -21,6 +21,12 @@ body {
   color: #fff !important;
 }
 
+/* General Block */
+.block {
+  padding-bottom: 20px;
+  padding-top: 50px;
+}
+
 /* ProfileIntro */
 
 .portfolio-block {
@@ -35,7 +41,7 @@ body {
   }
 }
 
-.portfolio-block .block-intro {
+.portfolio-block .block-intro, .block {
   text-align: center;
 }
 

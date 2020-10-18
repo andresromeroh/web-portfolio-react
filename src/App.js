@@ -3,6 +3,7 @@ import Footer from './components/Footer';
 import NavigationBar from './components/NavigationBar';
 import About from './pages/About';
 import Projects from './pages/Projects';
+import NotFound from './pages/NotFound';
 import {
     BrowserRouter as Router,
     Switch,
@@ -12,11 +13,12 @@ import {
 function App() {
     return (
         <Router>
-            <div className="App">
+            <div className='App'>
                 <NavigationBar />
                 <Switch>
-                    <Route path="/" exact component={About} />
-                    <Route path="/projects" exact component={Projects} />
+                    <Route path='/' exact component={About} />
+                    <Route path='/projects' exact component={Projects} />
+                    <Route path='/*' component={NotFound} />
                 </Switch>
                 <Footer />
             </div>
