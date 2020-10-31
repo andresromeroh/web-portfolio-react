@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 export default class NavigationBar extends Component {
 
@@ -53,19 +52,19 @@ export default class NavigationBar extends Component {
 
     render() {
         return (
-            <Navbar id='navbar' className='portfolio-navbar gradient' expand='lg' fixed='top'
+            <Navbar id='navbar' className='portfolio-navbar gradient' collapseOnSelect expand='lg' fixed='top'
                 style={{ opacity: `${this.state.opacity}`, display: this.state.hidden ? "none" : "" }}>
                 <Container>
                     <Navbar.Brand className='logo brand' href='/'>
                         <span role='img' aria-label='computer'>• ANDRESROMERO.DEV •</span>
                     </Navbar.Brand>
-                    <Navbar.Toggle />
-                    <Navbar.Collapse>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='nav navbar-nav ml-auto'>
-                            <Link className='nav-link' to='/'>About</Link>
-                            <Link className='nav-link' to='/projects'>Projects</Link>
-                            <Link className='nav-link' to='/experience'>Experience</Link>
-                            <Link className='nav-link' to='/contact'>Contact</Link>
+                            <Nav.Link href="/">About</Nav.Link>
+                            <Nav.Link href="/projects">Projects</Nav.Link>
+                            <Nav.Link href="/experience">Experience</Nav.Link>
+                            <Nav.Link href="/contact">Contact</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
