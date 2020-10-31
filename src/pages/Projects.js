@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProjectCard from '../shared/ProjectCard';
-import wait from 'waait';
-import RepositoryService from '../services/Repository.service';
+import RepositoryService from '../services/RepositoryService';
 import { css } from "@emotion/core";
 import PuffLoader from "react-spinners/RingLoader";
 import styled, { keyframes } from 'styled-components';
@@ -33,8 +32,7 @@ export default class Projects extends Component {
 
     componentDidMount = async () => {
         const repositories = await RepositoryService.findAllPublic();
-        await wait(1000); // little delay for the spinner...
-        this.setState({ repositories, isLoading: false });
+        this.setState(() => ({ repositories, isLoading: false }));
     }
 
     getRepositories = () => {
@@ -60,17 +58,17 @@ export default class Projects extends Component {
         return (
             <React.Fragment>
                 <Container className="portfolio-block project-no-images">
-                    <StyledH2>
-                        <StyledStrong>G</StyledStrong>itHub Projects
-                    </StyledH2>
                     {this.state.isLoading ?
                         <PuffLoader
                             css={spinnercss}
                             size={100}
                             color={"#f45b69"}
                             loading={this.state.loading}
-                        /> : // if else ...
+                        /> :
                         <FadeInDiv>
+                            <StyledH2>
+                                <StyledStrong>G</StyledStrong>itHub Projects
+                            </StyledH2>
                             <Row>
                                 {this.getRepositories()}
                             </Row>

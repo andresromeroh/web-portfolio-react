@@ -1,4 +1,4 @@
-import BaseService from './Base.service';
+import BaseService from './BaseService';
 
 class RepositoryService extends BaseService {
     _instance;
