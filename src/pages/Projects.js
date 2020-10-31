@@ -4,13 +4,13 @@ import ProjectCard from '../shared/ProjectCard';
 import wait from 'waait';
 import RepositoryService from '../services/Repository.service';
 import { css } from "@emotion/core";
-import PuffLoader from "react-spinners/PuffLoader";
+import PuffLoader from "react-spinners/RingLoader";
 import styled, { keyframes } from 'styled-components';
 import { fadeIn } from 'react-animations';
 
 const fadeInAnimation = keyframes`${fadeIn}`;
 const FadeInDiv = styled.div`animation: 1s ${fadeInAnimation};`;
-const StyledStrong = styled.strong`color: #028090`;
+const StyledStrong = styled.strong`color: #f45b69`;
 const StyledH2 = styled.h2`padding: 30px 0 30px 0`;
 
 const spinnercss = css`
@@ -52,7 +52,6 @@ export default class Projects extends Component {
                     />
                 </Col>
             );
-
             return jsx;
         }
     }
@@ -75,7 +74,8 @@ export default class Projects extends Component {
                             <Row>
                                 {this.getRepositories()}
                             </Row>
-                        </FadeInDiv>}
+                        </FadeInDiv>
+                    }
                 </Container>
             </React.Fragment >
         )

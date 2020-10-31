@@ -13,7 +13,7 @@ const MarginRow = styled(Row)`
 `
 const INTRO =
     <p className='intro-script'>
-        Hello! I am <strong>Andrés</strong>. I am a Full-Stack Software Engineer.
+        Hello! I am <strong style={{ color: '#f45b69' }}>Andrés</strong>. I am a Full-Stack Software Engineer.
         I have passion for high-quality, minimal and easy to use software products.
     </p>
     ;
@@ -35,12 +35,16 @@ export default class ProfileIntro extends Component {
                                     <StandardButton
                                         text='Check my Projects'
                                         size='lg'
+                                        isLink
+                                        action='/projects'
                                     />
                                 </Col>
                                 <Col>
                                     <StandardButton
                                         text='Send me an Email'
                                         size='lg'
+                                        isLink
+                                        action='/contact'
                                     />
                                 </Col>
                             </MarginRow>

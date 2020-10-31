@@ -6,7 +6,7 @@ import { BACKEND_DESCRIPTION, FRONTEND_DESCRIPTION, CLOUD_DESCRIPTION } from '..
 import { BACKEND_ICON, FRONTEND_ICON, CLOUD_ICON } from '../global/IconNames';
 
 const StyledStrong = styled.strong`
-    color: #028090
+    color: #f45b69
 `
 const StyledH2 = styled.h2`
     padding-bottom: 30px;

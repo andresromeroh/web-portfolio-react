@@ -5,7 +5,7 @@ import { Container, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 
 const StyledStrong = styled.strong`
-    color: #028090
+    color: #f45b69
 `
 const StyledH2 = styled.h2`
     padding-bottom: 50px
