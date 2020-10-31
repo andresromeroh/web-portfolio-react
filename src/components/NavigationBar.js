@@ -7,9 +7,7 @@ export default class NavigationBar extends Component {
         super(props)
 
         this.state = {
-            opacity: 1,
-            lastScrollPosition: 0,
-            hidden: false
+            opacity: 1
         }
     }
 
@@ -18,33 +16,10 @@ export default class NavigationBar extends Component {
             window.onscroll = () => {
                 let currentScrollPos = window.pageYOffset;
                 let maxScroll = document.body.scrollHeight - window.innerHeight;
-                if (currentScrollPos > 0 && currentScrollPos < maxScroll
-                    && currentScrollPos > this.state.lastScrollPosition) {
-                    if ((maxScroll - currentScrollPos) < maxScroll * 0.25) {
-                        this.setState({
-                            opacity: 0,
-                            lastScrollPosition: currentScrollPos,
-                            hidden: true
-                        })
-                    } else {
-                        this.setState((prevState) => ({
-                            opacity: prevState.opacity - 0.05,
-                            lastScrollPosition: currentScrollPos
-                        }))
-                    }
+                if (currentScrollPos > 0 && currentScrollPos < maxScroll) {
+                    this.setState({ opacity: 0 });
                 } else {
-                    if ((maxScroll - currentScrollPos) > maxScroll * 0.25) {
-                        this.setState({
-                            opacity: 1,
-                            lastScrollPosition: currentScrollPos,
-                        })
-                    } else {
-                        this.setState((prevState) => ({
-                            opacity: prevState.opacity + 0.05,
-                            lastScrollPosition: currentScrollPos,
-                            hidden: false
-                        }))
-                    }
+                    this.setState({ opacity: 1 });
                 }
             }
         }
@@ -56,7 +31,7 @@ export default class NavigationBar extends Component {
                 style={{ opacity: `${this.state.opacity}`, display: this.state.hidden ? "none" : "" }}>
                 <Container>
                     <Navbar.Brand className='logo brand' href='/'>
-                        <span role='img' aria-label='computer'>• ANDRESROMERO.DEV •</span>
+                        <span role='img' aria-label='computer'>💻 ANDRESROMERO.DEV</span>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
