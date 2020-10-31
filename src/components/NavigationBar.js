@@ -29,7 +29,7 @@ export default class NavigationBar extends Component {
                         })
                     } else {
                         this.setState((prevState) => ({
-                            opacity: prevState.opacity - 0.1,
+                            opacity: prevState.opacity - 0.05,
                             lastScrollPosition: currentScrollPos
                         }))
                     }
@@ -38,12 +38,12 @@ export default class NavigationBar extends Component {
                         this.setState({
                             opacity: 1,
                             lastScrollPosition: currentScrollPos,
-                            hidden: false
                         })
                     } else {
                         this.setState((prevState) => ({
-                            opacity: prevState.opacity + 0.1,
-                            lastScrollPosition: currentScrollPos
+                            opacity: prevState.opacity + 0.05,
+                            lastScrollPosition: currentScrollPos,
+                            hidden: false
                         }))
                     }
                 }
