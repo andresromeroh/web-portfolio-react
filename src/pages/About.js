@@ -7,6 +7,7 @@ import styled, { keyframes } from 'styled-components';
 import BadgeService from '../services/BadgeService';
 import { css } from "@emotion/core";
 import PuffLoader from "react-spinners/RingLoader";
+import { Container } from 'react-bootstrap';
 
 const fadeInAnimation = keyframes`${fadeIn}`;
 const FadeInDiv = styled.div`
@@ -38,7 +39,7 @@ export default class About extends Component {
     render() {
         const { badges } = this.state;
         return (
-            <React.Fragment>
+            <Container className='portfolio-block .block-intro'>
                 {this.state.isLoading ?
                     <PuffLoader
                         css={spinnercss}
@@ -52,7 +53,7 @@ export default class About extends Component {
                         <Carousel items={badges} />
                     </FadeInDiv>
                 }
-            </React.Fragment>
+            </Container>
         )
     }
 }

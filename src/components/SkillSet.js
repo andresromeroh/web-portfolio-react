@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import SkillCard from '../shared/SkillCard';
 import styled from 'styled-components';
 import { BACKEND_DESCRIPTION, FRONTEND_DESCRIPTION, CLOUD_DESCRIPTION } from '../global/Constants';
@@ -16,7 +16,7 @@ const StyledH2 = styled.h2`
 export default class SkillSet extends Component {
     render() {
         return (
-            <Container className='skill-set'>
+            <section className='skill-set'>
                 <Row>
                     <StyledH2>
                         <StyledStrong>S</StyledStrong>oftware Development Skills
@@ -45,7 +45,7 @@ export default class SkillSet extends Component {
                         />
                     </Col>
                 </Row>
-            </Container>
+            </section>
         )
     }
 }

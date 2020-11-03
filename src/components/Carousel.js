@@ -1,7 +1,7 @@
 import React from 'react';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import AliceCarousel from 'react-alice-carousel';
-import { Container, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import styled from 'styled-components';
 
 const StyledStrong = styled.strong`
@@ -26,7 +26,7 @@ const Carousel = ({ items }) => {
     };
 
     return (
-        <Container className='mobile-hide'>
+        <section className='mobile-hide'>
             <Row style={{ marginLeft: '1%' }}>
                 <StyledH2>
                     <StyledStrong>C</StyledStrong>ertifications & Badges
@@ -40,7 +40,7 @@ const Carousel = ({ items }) => {
                 items={images}
                 responsive={responsive}
             />
-        </Container>
+        </section>
     );
 }
 
