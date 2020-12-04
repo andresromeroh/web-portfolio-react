@@ -6,7 +6,7 @@ import { fadeIn } from 'react-animations';
 import styled, { keyframes } from 'styled-components';
 import BadgeService from '../services/BadgeService';
 import { css } from "@emotion/core";
-import PuffLoader from "react-spinners/RingLoader";
+import PacmanLoader from "react-spinners/PacmanLoader";
 import { Container } from 'react-bootstrap';
 
 const fadeInAnimation = keyframes`${fadeIn}`;
@@ -41,9 +41,9 @@ export default class About extends Component {
         return (
             <Container className='portfolio-block .block-intro'>
                 {this.state.isLoading ?
-                    <PuffLoader
+                    <PacmanLoader
                         css={spinnercss}
-                        size={100}
+                        size={20}
                         color={"#f45b69"}
                         loading={this.state.loading}
                     /> :

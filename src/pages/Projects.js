@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import ProjectCard from '../shared/ProjectCard';
 import RepositoryService from '../services/RepositoryService';
 import { css } from "@emotion/core";
-import PuffLoader from "react-spinners/RingLoader";
+import PacmanLoader from "react-spinners/PacmanLoader";
 import styled, { keyframes } from 'styled-components';
 import { fadeIn } from 'react-animations';
 
@@ -59,9 +59,9 @@ export default class Projects extends Component {
             <React.Fragment>
                 <Container className="portfolio-block project-no-images">
                     {this.state.isLoading ?
-                        <PuffLoader
+                        <PacmanLoader
                             css={spinnercss}
-                            size={100}
+                            size={20}
                             color={"#f45b69"}
                             loading={this.state.loading}
                         /> :

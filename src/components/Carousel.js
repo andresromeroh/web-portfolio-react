@@ -15,7 +15,7 @@ const Carousel = ({ items }) => {
 
     const images = items.map((item, index) => (
         <a key={index} href={item.information} target='_blank' rel='noreferrer noopener'>
-            <img src={item.image} alt='badge' />
+            <img className='zoom' src={item.image} alt='badge' />
         </a>
     ));
 
@@ -34,8 +34,9 @@ const Carousel = ({ items }) => {
             </Row>
             <AliceCarousel
                 animationDuration={2000}
-                paddingLeft={120}
+                paddingLeft={60}
                 disableButtonsControls
+                infinite
                 mouseTracking
                 items={images}
                 responsive={responsive}
