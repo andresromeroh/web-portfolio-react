@@ -27,7 +27,7 @@ export default class NavigationBar extends Component {
 
     render() {
         return (
-            <Navbar id='navbar' className='portfolio-navbar navbar-dark gradient' collapseOnSelect expand='lg' fixed='top'
+            <Navbar id='navbar' className='navbar-dark gradient' expand='lg' collapseOnSelect fixed='top'
                 style={{ opacity: `${this.state.opacity}`, display: this.state.hidden ? "none" : "" }}>
                 <Container>
                     <Navbar.Brand className='logo brand' href='/'>

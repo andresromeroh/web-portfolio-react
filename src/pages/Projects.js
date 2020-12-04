@@ -42,23 +42,21 @@ export default class Projects extends Component {
 
     render() {
         return (
-            <React.Fragment>
-                <Container className="portfolio-block project-no-images">
-                    {this.state.isLoading ?
-                        <PacmanLoader
-                            css={Spinnercss}
-                            size={20}
-                            color={"#f45b69"}
-                            loading={this.state.loading}
-                        /> :
-                        <FadeInDiv>
-                            <Row className='p-5'>
-                                {this.getRepositories()}
-                            </Row>
-                        </FadeInDiv>
-                    }
-                </Container>
-            </React.Fragment >
+            <Container className="portfolio-block project-no-images">
+                {this.state.isLoading ?
+                    <PacmanLoader
+                        css={Spinnercss}
+                        size={20}
+                        color={"#f45b69"}
+                        loading={this.state.loading}
+                    /> :
+                    <FadeInDiv>
+                        <Row className='p-5'>
+                            {this.getRepositories()}
+                        </Row>
+                    </FadeInDiv>
+                }
+            </Container>
         )
     }
 }

@@ -9,7 +9,7 @@ export default class SkillSet extends Component {
     render() {
         return (
             <section className='skill-set'>
-                <Row className='ml-3 pb-5'>
+                <Row className='pb-5'>
                     <h2>
                         <Strong>S</Strong>oftware Development Skills
                     </h2>

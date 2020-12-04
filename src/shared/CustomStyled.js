@@ -1,9 +1,10 @@
 import styled, { keyframes } from 'styled-components';
 import { css } from "@emotion/core";
-import { fadeIn } from 'react-animations';
+import { fadeIn, fadeInDown  } from 'react-animations';
 
 export const Strong = styled.strong`color: #f45b69`;
-export const FadeInDiv = styled.div`animation: 1s ${keyframes`${fadeIn}`};`;
+export const FadeInDiv = styled.div`animation: 3s ${keyframes`${fadeIn}`};`;
+export const FadeInDowDiv = styled.div`animation: 3s ${keyframes`${fadeInDown}`};`;
 
 export const Spinnercss = css`
   display: block;

@@ -9,11 +9,12 @@ import {
     Switch,
     Route,
 } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 
 function App() {
     return (
         <Router>
-            <React.Fragment className='App'>
+            <Container className='App'>
                 <NavigationBar />
                 <Switch>
                     <Route path='/' exact component={About} />
@@ -21,7 +22,7 @@ function App() {
                     <Route path='/*' component={NotFound} />
                 </Switch>
                 <Footer />
-            </React.Fragment>
+            </Container>
         </Router>
     );
 }

@@ -15,8 +15,8 @@ const Carousel = ({ items }) => {
         1: { items: 5 }
     };
     return (
-        <section className=''>
-            <Row className='ml-3 pb-5'>
+        <section className='carousel'>
+            <Row className='pb-5'>
                 <h2>
                     <Strong>C</Strong>ertifications & Badges
                 </h2>
