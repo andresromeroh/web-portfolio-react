@@ -4,23 +4,20 @@ import StandardButton from '../shared/StandardButton';
 import Avatar from '../assets/images/development.png';
 import styled from 'styled-components';
 
-const StyledSection = styled.section`
-    padding-bottom: 15px
-`
 const MarginRow = styled(Row)`
     margin-top: 40px
 `
 const INTRO =
     <p className='intro-script'>
-        Hello! I am <strong style={{ color: '#f45b69' }}>Andrés</strong>. I am a Full-Stack Software Engineer.
-        I have passion for high-quality, minimal and easy to use software products.
+        Hello there! I am <strong style={{ color: '#f45b69' }}>Andrés</strong>, I'm a Software Developer
+        with passion for building high-quality, minimal and easy to use software solutions.
     </p>
 ;
 
 export default class ProfileIntro extends Component {
     render() {
         return (
-            <StyledSection>
+            <section>
                 <Row>
                     <Col sm='12' md='6' lg='6' xl='6'>
                         <Row>
@@ -51,7 +48,7 @@ export default class ProfileIntro extends Component {
                         <img className='avatar' src={Avatar} alt='Avatar' />
                     </Col>
                 </Row>
-            </StyledSection>
+            </section>
         )
     }
 }

@@ -2,24 +2,11 @@ import React, { Component } from 'react'
 import ProfileIntro from '../components/ProfileIntro';
 import SkillSet from '../components/SkillSet';
 import Carousel from '../components/Carousel';
-import { fadeIn } from 'react-animations';
-import styled, { keyframes } from 'styled-components';
 import BadgeService from '../services/BadgeService';
-import { css } from "@emotion/core";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import { Container } from 'react-bootstrap';
+import { FadeInDiv, Spinnercss } from '../shared/CustomStyled';
 
-const fadeInAnimation = keyframes`${fadeIn}`;
-const FadeInDiv = styled.div`
-  animation: 1s ${fadeInAnimation};
-`;
-
-const spinnercss = css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-  margin-top: 5%;
-`;
 export default class About extends Component {
 
     constructor(props) {
@@ -42,7 +29,7 @@ export default class About extends Component {
             <Container className='portfolio-block .block-intro'>
                 {this.state.isLoading ?
                     <PacmanLoader
-                        css={spinnercss}
+                        css={Spinnercss}
                         size={20}
                         color={"#f45b69"}
                         loading={this.state.loading}

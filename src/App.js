@@ -13,7 +13,7 @@ import {
 function App() {
     return (
         <Router>
-            <div className='App'>
+            <React.Fragment className='App'>
                 <NavigationBar />
                 <Switch>
                     <Route path='/' exact component={About} />
@@ -21,7 +21,7 @@ function App() {
                     <Route path='/*' component={NotFound} />
                 </Switch>
                 <Footer />
-            </div>
+            </React.Fragment>
         </Router>
     );
 }

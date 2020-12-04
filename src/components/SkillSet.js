@@ -1,26 +1,18 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import SkillCard from '../shared/SkillCard';
-import styled from 'styled-components';
+import { Strong } from '../shared/CustomStyled';
 import { BACKEND_DESCRIPTION, FRONTEND_DESCRIPTION, CLOUD_DESCRIPTION } from '../global/Constants';
 import { BACKEND_ICON, FRONTEND_ICON, CLOUD_ICON } from '../global/IconNames';
-
-const StyledStrong = styled.strong`
-    color: #f45b69
-`
-const StyledH2 = styled.h2`
-    padding-bottom: 30px;
-    margin-left: 2%
-`
 
 export default class SkillSet extends Component {
     render() {
         return (
             <section className='skill-set'>
-                <Row>
-                    <StyledH2>
-                        <StyledStrong>S</StyledStrong>oftware Development Skills
-                    </StyledH2>
+                <Row className='ml-3 pb-5'>
+                    <h2>
+                        <Strong>S</Strong>oftware Development Skills
+                    </h2>
                 </Row>
                 <Row>
                     <Col sm='12' md='4' lg='4' xl='4'>

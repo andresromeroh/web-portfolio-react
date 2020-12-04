@@ -2,22 +2,8 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProjectCard from '../shared/ProjectCard';
 import RepositoryService from '../services/RepositoryService';
-import { css } from "@emotion/core";
 import PacmanLoader from "react-spinners/PacmanLoader";
-import styled, { keyframes } from 'styled-components';
-import { fadeIn } from 'react-animations';
-
-const fadeInAnimation = keyframes`${fadeIn}`;
-const FadeInDiv = styled.div`animation: 1s ${fadeInAnimation};`;
-const StyledStrong = styled.strong`color: #f45b69`;
-const StyledH2 = styled.h2`padding: 30px 0 30px 0`;
-
-const spinnercss = css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-  margin-top: 5%;
-`;
+import { FadeInDiv, Spinnercss } from '../shared/CustomStyled';
 
 export default class Projects extends Component {
 
@@ -60,16 +46,13 @@ export default class Projects extends Component {
                 <Container className="portfolio-block project-no-images">
                     {this.state.isLoading ?
                         <PacmanLoader
-                            css={spinnercss}
+                            css={Spinnercss}
                             size={20}
                             color={"#f45b69"}
                             loading={this.state.loading}
                         /> :
                         <FadeInDiv>
-                            <StyledH2>
-                                <StyledStrong>G</StyledStrong>itHub Projects
-                            </StyledH2>
-                            <Row>
+                            <Row className='p-5'>
                                 {this.getRepositories()}
                             </Row>
                         </FadeInDiv>
