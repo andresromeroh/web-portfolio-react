@@ -11,6 +11,13 @@ export default class Footer extends Component {
     render() {
         return (
             <StyledFooter>
+                <div>
+                    <small>
+                        <span role='img' aria-label='Made by Andres Romero'>
+                            © {new Date().getFullYear()} | Andres Romero | Made with ❤️
+                        </span>
+                    </small>
+                </div>
                 <hr></hr>
                 <div className='links'>
                     <a className='p-3' href='/'>About</a>

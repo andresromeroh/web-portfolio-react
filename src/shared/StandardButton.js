@@ -3,15 +3,15 @@ import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 // Action could be either a URL or a function depending if the button is a link
-export default function StandardButton({ text, size, isLink, action }) {
+export default function StandardButton({ text, size, isLink, action, className = '' }) {
     if (isLink) {
         return (
             <React.Fragment>
                 <Link className='nav-link' to={action}>
                     <Button
-                        className="standard-btn"
+                        className={className ? `standard-btn ${className}` : 'standard-btn'}
                         size={size}
-                        variant="outline-primary"
+                        variant='outline-primary'
                     >
                         {text}
                     </Button>
@@ -22,10 +22,10 @@ export default function StandardButton({ text, size, isLink, action }) {
         return (
             <React.Fragment>
                 <Button
-                    className="standard-btn"
+                    className={className ? `standard-btn ${className}` : 'standard-btn'}
                     onClick={action}
                     size={size}
-                    variant="outline-primary"
+                    variant='outline-primary'
                 >
                     {text}
                 </Button>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProjectCard from '../shared/ProjectCard';
 import RepositoryService from '../services/RepositoryService';
-import PacmanLoader from "react-spinners/PacmanLoader";
+import PacmanLoader from 'react-spinners/PacmanLoader';
 import { FadeInDiv, Spinnercss } from '../shared/CustomStyled';
 
 export default class Projects extends Component {
@@ -42,12 +42,12 @@ export default class Projects extends Component {
 
     render() {
         return (
-            <Container className="portfolio-block project-no-images">
+            <Container className='mt-5 project-no-images'>
                 {this.state.isLoading ?
                     <PacmanLoader
                         css={Spinnercss}
                         size={20}
-                        color={"#f45b69"}
+                        color={'#f45b69'}
                         loading={this.state.loading}
                     /> :
                     <FadeInDiv>
