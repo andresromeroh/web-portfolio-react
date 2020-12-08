@@ -50,7 +50,7 @@ export default class Contact extends Component {
                         <Form.Group>
                             <StandardButton
                                 className='mr-3'
-                                text='✉ Send Email'
+                                text='Send Email'
                                 isLink={false}
                                 size='lg'
                                 action={() => console.log('Submitting...')}
