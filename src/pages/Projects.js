@@ -42,7 +42,7 @@ export default class Projects extends Component {
 
     render() {
         return (
-            <Container className='mt-5 project-no-images'>
+            <Container className='portfolio-block project-no-images'>
                 {this.state.isLoading ?
                     <PacmanLoader
                         css={Spinnercss}

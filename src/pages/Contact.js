@@ -27,7 +27,7 @@ export default class Contact extends Component {
                     <Form>
                         <Form.Group controlId='formBasicEmail'>
                             <Form.Label>Subject</Form.Label>
-                            <Form.Control as="select">
+                            <Form.Control as='select' className='browser-default custom-select'>
                                 <option>Just to say hi!</option>
                                 <option>Business Inquiry / Freelance</option>
                                 <option>Social Media (LinkedIn, Twitter, etc)</option>
