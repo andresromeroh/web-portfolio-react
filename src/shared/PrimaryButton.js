@@ -9,6 +9,7 @@ export default function PrimaryButton({ text, size, action, className = '' }) {
                 onClick={action}
                 size={size}
                 block
+                autoFocus
             >
                 {text}
             </Button>

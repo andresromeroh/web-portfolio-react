@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Container, Row, Col } from 'react-bootstrap';
 import PrimaryButton from '../shared/PrimaryButton';
 import EmailService from '../services/EmailService';
+import swal from 'sweetalert';
 
 export default class Contact extends Component {
 
@@ -21,8 +22,22 @@ export default class Contact extends Component {
 
     onEmailSend = async () => {
         const { from, subject, text } = this.state;
-        const response = await EmailService.sendEmail(from, subject, text);
-        console.log(JSON.stringify(response, null, 4));
+        const [response] = await EmailService.sendEmail(from, subject, text);
+
+        if (response.statusCode === 200 || response.statusCode === 202) {
+            swal({
+                title: 'Success!',
+                text: 'Your email has been sent!',
+                icon: 'success',
+                buttons: false
+            });
+            setTimeout(() => {
+                swal.close();
+                this.setState({ from: '', text: '' });
+            }, 1000);
+        } else {
+            console.log(JSON.stringify(response, null, 4));
+        }
     }
 
     render() {

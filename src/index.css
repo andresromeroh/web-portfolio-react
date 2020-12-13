@@ -159,7 +159,7 @@ a, a:visited, a:active { color: inherit; }
   border-radius: 2em !important;
 }
 
-.btn-primary.focus, .btn-primary:focus, .btn-primary:hover {
+.btn-primary:hover {
   color: #fff !important;
   background-color: #585656 !important;
   border-color: #585656 !important;
