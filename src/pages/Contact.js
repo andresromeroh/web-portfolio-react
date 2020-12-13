@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Container, Row, Col } from 'react-bootstrap';
 import PrimaryButton from '../shared/PrimaryButton';
+import EmailService from '../services/EmailService';
+import swal from 'sweetalert';
 
 export default class Contact extends Component {
 
@@ -8,13 +10,38 @@ export default class Contact extends Component {
         super(props);
         this.state = {
             isSending: false,
-            subject: 'Choose Subject',
-            email: '',
-            message: ''
+            from: '',
+            subject: 'Business Inquiry',
+            text: ''
         };
     }
 
+    onInputChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value });
+    }
+
+    onEmailSend = async () => {
+        const { from, subject, text } = this.state;
+        const [response] = await EmailService.sendEmail(from, subject, text);
+
+        if (response.statusCode === 200 || response.statusCode === 202) {
+            swal({
+                title: 'Success!',
+                text: 'Your email has been sent!',
+                icon: 'success',
+                buttons: false
+            });
+            setTimeout(() => {
+                swal.close();
+                this.setState({ from: '', text: '' });
+            }, 1000);
+        } else {
+            console.log(JSON.stringify(response, null, 4));
+        }
+    }
+
     render() {
+        const { subject, from, text } = this.state;
         return (
             <Container className='portfolio-block'>
                 <Row>
@@ -24,33 +51,52 @@ export default class Contact extends Component {
                         </Row>
                         <Row>
                             <Form>
-                                <Form.Group controlId='formBasicEmail'>
+                                <Form.Group controlId='formBasicfrom'>
                                     <Form.Label>Subject</Form.Label>
-                                    <Form.Control as='select' className='browser-default custom-select'>
+                                    <Form.Control
+                                        as='select'
+                                        name='subject'
+                                        className='browser-default custom-select'
+                                        value={subject}
+                                        onChange={this.onInputChange}>
                                         <option>Business Inquiry</option>
                                         <option>Freelance Project</option>
-                                        <option>Just to say hello!</option>
+                                        <option>Just to say hi!</option>
                                         <option>Software Question</option>
                                     </Form.Control>
                                 </Form.Group>
 
                                 <Form.Group controlId='formBasicPassword'>
-                                    <Form.Label>Email Address</Form.Label>
-                                    <Form.Control type='email' placeholder='username@gmail.com' htmlSize={75} />
+                                    <Form.Label>from Address</Form.Label>
+                                    <Form.Control
+                                        type='from'
+                                        name='from'
+                                        placeholder='username@gmail.com'
+                                        htmlSize={75}
+                                        value={from}
+                                        onChange={this.onInputChange}
+                                    />
                                     <Form.Text className='text-muted'>
-                                        I'll never share your email with anyone else.
+                                        I'll never share your from with anyone else.
                                     </Form.Text>
                                 </Form.Group>
                                 <Form.Group controlId='formBasicCheckbox'>
-                                    <Form.Label>Message (Max. 300 words)</Form.Label>
-                                    <Form.Control as='textarea' rows={3} htmlSize={75} />
+                                    <Form.Label>text (Max. 300 words)</Form.Label>
+                                    <Form.Control
+                                        as='textarea'
+                                        name='text'
+                                        rows={3}
+                                        htmlSize={75}
+                                        value={text}
+                                        onChange={this.onInputChange}
+                                    />
                                 </Form.Group>
                                 <Col className='mt-5' md={{ span: 8, offset: 2 }}>
                                     <Form.Group>
                                         <PrimaryButton
-                                            text='Send message'
+                                            text='Send text'
                                             size='lg'
-                                            action={() => console.log('Submitting...')}
+                                            action={this.onEmailSend}
                                         />
                                     </Form.Group>
                                 </Col>

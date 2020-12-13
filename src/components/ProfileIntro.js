@@ -13,7 +13,6 @@ const INTRO =
         Hello there! I am <strong style={{ color: '#f45b69' }}>Andrés</strong>, I'm a Software Developer
         with passion for building high-quality, minimal and easy to use software solutions.
     </p>
-;
 
 export default class ProfileIntro extends Component {
     render() {
