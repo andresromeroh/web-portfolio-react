@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
+// Primary Button for Key Actions
 export default function PrimaryButton({ text, size, action, className = '' }) {
     return (
         <React.Fragment>
@@ -9,7 +10,6 @@ export default function PrimaryButton({ text, size, action, className = '' }) {
                 onClick={action}
                 size={size}
                 block
-                autoFocus
             >
                 {text}
             </Button>
