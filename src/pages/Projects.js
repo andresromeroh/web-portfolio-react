@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Pagination } from 'react-bootstrap';
 import ProjectCard from '../shared/ProjectCard';
 import RepositoryService from '../services/RepositoryService';
 import PacmanLoader from 'react-spinners/PacmanLoader';
 import { FadeInDiv, Spinnercss } from '../shared/CustomStyled';
+import { Strong } from '../shared/CustomStyled';
+
+let active = 2;
+let items = [];
+for (let number = 1; number <= 5; number++) {
+    items.push(
+        <Pagination.Item key={number} active={number === active}>
+            {number}
+        </Pagination.Item>,
+    );
+}
 
 export default class Projects extends Component {
 
@@ -26,37 +37,65 @@ export default class Projects extends Component {
         if (!repositories.length) {
             return [];
         } else {
-            const jsx = repositories.map((repo, index) =>
-                <Col md='6' lg='4' key={index}>
-                    <ProjectCard
-                        title={repo.name.replaceAll('-', ' ').toUpperCase()}
-                        description={repo.description}
-                        language={repo.language}
-                        url={repo.htmlUrl}
-                    />
-                </Col>
-            );
+            const jsx = repositories.map((repo, index) => {
+                if (index < 9) {
+                    return <Col md='6' lg='4' key={index}>
+                        <ProjectCard
+                            title={this.formatTitle(repo.name)}
+                            // description={repo.description}
+                            language={repo.language}
+                            url={repo.htmlUrl}
+                        />
+                    </Col>
+                }
+                return null;
+            });
             return jsx;
         }
     }
 
+    formatTitle = (title) => {
+        const formatedTitle = title.replaceAll('-', ' ').toUpperCase();
+        if (formatedTitle.length > 15) {
+            const splitted = formatedTitle.slice(0, 20);
+            return splitted;
+        }
+        return formatedTitle;
+    }
+
     render() {
         return (
-            <Container className='portfolio-block project-no-images'>
+            <React.Fragment>
                 {this.state.isLoading ?
-                    <PacmanLoader
-                        css={Spinnercss}
-                        size={20}
-                        color={'#f45b69'}
-                        loading={this.state.loading}
-                    /> :
-                    <FadeInDiv>
-                        <Row className='p-5'>
-                            {this.getRepositories()}
-                        </Row>
-                    </FadeInDiv>
+                    <Container className='pacman-spinner'>
+                        <PacmanLoader
+                            css={Spinnercss}
+                            size={20}
+                            color={'#f45b69'}
+                            loading={this.state.loading}
+                        />
+                    </Container>
+                    :
+                    <Container className='projects-block'>
+                        <FadeInDiv>
+                            <Row className='pt-5 pl-5'>
+                                <h2>
+                                    <Strong>C</Strong>oding Projects
+                            </h2>
+                            </Row>
+                            <Row className='p-5'>
+                                {this.getRepositories()}
+                                <Row className='ml-3 mt-2'>
+                                    <h6>Projects: 1 to 9</h6>
+                                </Row>
+                                <Row className='ml-auto mr-3 mt-1'>
+                                    <Pagination>{items}</Pagination>
+                                </Row>
+                            </Row>
+                        </FadeInDiv>
+                    </Container>
                 }
-            </Container>
+            </React.Fragment>
         )
     }
 }

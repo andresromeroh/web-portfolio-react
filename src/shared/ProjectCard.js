@@ -3,12 +3,15 @@ import React from 'react';
 export default function ProjectCard({ title, description, language, url }) {
     return (
         <div className="project-card-no-image">
-            <h4>{title}</h4>
-            <h6>{description}</h6>
-            <div className="tags">
-                {/* TODO: Convert to Styled Component */}
+            <h6>{title}</h6>
+            <p>{description}</p>
+            <div>
                 <small>
-                    Language: {language} |
+                    Language: {language}
+                </small>
+            </div>
+            <div>
+                <small>
                     <strong>
                         <a href={url} style={{ textDecoration: 'none', color: '#f45b69' }}>
                             {' '}See more
