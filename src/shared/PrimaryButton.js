@@ -2,13 +2,14 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 
 // Primary Button for Key Actions
-export default function PrimaryButton({ text, size, action, className = '' }) {
+export default function PrimaryButton({ text, size, action, disabled, className = '' }) {
     return (
         <React.Fragment>
             <Button
                 className={className ? `btn-primary ${className}` : 'btn-primary'}
                 onClick={action}
                 size={size}
+                disabled={disabled}
                 block
             >
                 {text}

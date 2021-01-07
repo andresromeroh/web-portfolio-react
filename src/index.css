@@ -10,6 +10,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.pacman-spinner {
+  padding-top: 60px;
+  padding-bottom: 75px;
+}
+
 /* NavigationBar */
 
 .gradient {
@@ -22,6 +27,7 @@ body {
 }
 
 /* General Block */
+
 .block {
   padding-bottom: 20px;
   padding-top: 50px;
@@ -184,6 +190,7 @@ a, a:visited, a:active { color: inherit; }
 }
 
 /* Utilities */
+
 .zoom {
   padding: 10px;
   transition: transform .2s; /* Animation */
@@ -193,4 +200,39 @@ a, a:visited, a:active { color: inherit; }
 .zoom:hover {
   /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   transform: scale(1.2);
+}
+
+/* Projects */
+
+.projects-block {
+  padding-top: 50px;
+}
+
+.pagination > li > a
+{
+    background-color: white !important;
+    color: #000000 !important;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #000000 !important;
+    background-color: #eee !important;
+    border-color: #ddd !important;
+}
+
+.pagination > .active > .page-link
+{
+    color: rgb(255, 255, 255) !important;
+    background-color: #f45b69 !important;
+    border: solid 1px #f45b69 !important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #5A4181 !important;
+    border: solid 1px #5A4181 !important;
 }

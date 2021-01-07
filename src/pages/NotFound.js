@@ -7,8 +7,8 @@ export default class ProfileIntro extends Component {
     render() {
         return (
             <Container className='block'>
-                <img src={Dog} alt='Dog' style={{ height: 500, width: 500 }} />
-                <h2>I'm sorry my dog ate this page :(</h2>
+                <img className='mt-5' src={Dog} alt='Dog' style={{ height: 400, width: 400 }} />
+                <h2 className='mb-5'>HTTP 404: A dog ate this page!</h2>
             </Container>
         )
     }

@@ -26,21 +26,26 @@ export default class About extends Component {
     render() {
         const { badges } = this.state;
         return (
-            <Container className='portfolio-block .block-intro'>
-                {this.state.isLoading ?
-                    <PacmanLoader
-                        css={Spinnercss}
-                        size={20}
-                        color={"#f45b69"}
-                        loading={this.state.loading}
-                    /> :
-                    <FadeInDiv>
-                        <ProfileIntro />
-                        <SkillSet />
-                        <Carousel items={badges} />
-                    </FadeInDiv>
+            <React.Fragment>
+                {
+                    this.state.isLoading ?
+                        <Container className='pacman-spinner'>
+                            <PacmanLoader
+                                css={Spinnercss}
+                                size={20}
+                                color={"#f45b69"}
+                                loading={this.state.loading}
+                            />
+                        </Container> :
+                        <Container className='portfolio-block .block-intro'>
+                            <FadeInDiv>
+                                <ProfileIntro />
+                                <SkillSet />
+                                <Carousel items={badges} />
+                            </FadeInDiv>
+                        </Container>
                 }
-            </Container>
+            </React.Fragment>
         )
     }
 }
