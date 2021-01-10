@@ -108,7 +108,7 @@ body {
 /* SkillSet */
 
 .skill-set {
-  padding-bottom: 70px;
+  padding-bottom: 60px;
   padding-top: 20px;
 }
 
@@ -235,4 +235,56 @@ a, a:visited, a:active { color: inherit; }
 {
     background-color: #5A4181 !important;
     border: solid 1px #5A4181 !important;
+}
+
+/* Floating Action Button */
+.fab {
+  width: 60px;
+  height: 60px;
+  background-color: #f45b69;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgb(124, 124, 124);
+  transition: all 0.1s ease-in-out;
+
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+
+  cursor: pointer;
+}
+
+.fab:hover {
+  box-shadow: 0 4px 12px 0 rgb(124, 124, 124);
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 720px) {
+  /* CSS Rules */
+  .fab {
+    width: 50px;
+    height: 50px;
+    background-color: #f45b69;
+    border-radius: 50%;
+    box-shadow: 0 4 8px 0 rgb(124, 124, 124);
+    transition: all 0.1s ease-in-out;
+
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+
+    position: fixed;
+    right: 25px;
+    bottom: 35px;
+  }
+  
+  .fab:hover {
+    box-shadow: 0 4px 12px 0 rgb(156, 156, 156);
+    transform: scale(1.05);
+  }
 }

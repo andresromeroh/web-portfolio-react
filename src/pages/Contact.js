@@ -3,7 +3,6 @@ import { Form, Container, Row, Col } from 'react-bootstrap';
 import PrimaryButton from '../shared/PrimaryButton';
 import EmailService from '../services/EmailService';
 import swal from 'sweetalert2';
-import { COUNTRIES } from '../global/Constants';
 
 export default class Contact extends Component {
 
@@ -73,20 +72,6 @@ export default class Contact extends Component {
                                     </Form.Control>
                                 </Form.Group>
                                 <Form.Group controlId='formBasicPassword'>
-                                    <Form.Label>Country / Location</Form.Label>
-                                    <Form.Control
-                                        as='select'
-                                        name='subject'
-                                        className='browser-default custom-select'
-                                        value={subject}
-                                        onChange={this.onInputChange}
-                                        required>
-                                        {COUNTRIES ? COUNTRIES.map(country =>
-                                            <option>{country}</option>
-                                        ) : []}
-                                    </Form.Control>
-                                </Form.Group>
-                                <Form.Group controlId='formBasicPassword'>
                                     <Form.Label>E-mail Address</Form.Label>
                                     <Form.Control
                                         type='from'
@@ -96,6 +81,7 @@ export default class Contact extends Component {
                                         value={from}
                                         onChange={this.onInputChange}
                                         required
+                                        autocomplete='off'
                                     />
                                     <Form.Text className='text-muted'>
                                         I'll never share your from with anyone else.
@@ -111,6 +97,7 @@ export default class Contact extends Component {
                                         value={text}
                                         onChange={this.onInputChange}
                                         required
+                                        autocomplete='off'
                                     />
                                 </Form.Group>
                                 <Col className='mt-5' md={{ span: 8, offset: 2 }}>
