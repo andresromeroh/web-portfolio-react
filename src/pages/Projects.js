@@ -4,7 +4,6 @@ import ProjectCard from '../shared/ProjectCard';
 import RepositoryService from '../services/RepositoryService';
 import PacmanLoader from 'react-spinners/PacmanLoader';
 import { FadeInDiv, Spinnercss } from '../shared/CustomStyled';
-import { Strong } from '../shared/CustomStyled';
 
 let active = 2;
 let items = [];
@@ -80,7 +79,7 @@ export default class Projects extends Component {
                         <FadeInDiv>
                             <Row className='pt-5 pl-5'>
                                 <h2>
-                                    <Strong>C</Strong>oding Projects
+                                    Coding Projects
                             </h2>
                             </Row>
                             <Row className='p-5'>

@@ -16,7 +16,7 @@ export default class NavigationBar extends Component {
             window.onscroll = () => {
                 let currentScrollPos = window.pageYOffset;
                 let maxScroll = document.body.scrollHeight - window.innerHeight;
-                if (currentScrollPos > 0 && currentScrollPos < maxScroll) {
+                if (currentScrollPos > 0 && currentScrollPos <= (maxScroll + 100)) {
                     this.setState({ opacity: 0 });
                 } else {
                     this.setState({ opacity: 1 });
@@ -28,11 +28,11 @@ export default class NavigationBar extends Component {
     render() {
         return (
             <Navbar id='navbar' className='navbar-dark gradient' expand='lg' collapseOnSelect fixed='top'
-                style={{ opacity: `${this.state.opacity}`, display: this.state.hidden ? "none" : "" }}>
+                style={{ opacity: `${this.state.opacity}`, display: this.state.hidden ? "none" : "", transition: 'opacity 0.25s' }}>
                 <Container>
                     <Navbar.Brand className='logo brand' href='/'>
                         <span role='img' aria-label='computer'>
-                            ANDRESROMERO.DEV
+                            💻 Andresromero.dev
                         </span>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
