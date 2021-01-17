@@ -8,7 +8,7 @@ export default class BaseService {
 
     constructor(baseUrl) {
         this.baseUrl = this.initUrl(baseUrl);
-        this.timeout = 5000; // 5s by default for now
+        this.timeout = 30000; // 30s by default for now
         this.headers = {};
         this.client = axios.create({
             baseURL: this.baseUrl,

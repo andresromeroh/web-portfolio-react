@@ -30,7 +30,7 @@ export default class Contact extends Component {
                 text: 'Your email has been sent.',
                 icon: 'success',
                 buttons: false,
-                iconColor: '#f45b69',
+                iconColor: '#2ec4b6',
                 showConfirmButton: false,
                 position: 'center'
             })

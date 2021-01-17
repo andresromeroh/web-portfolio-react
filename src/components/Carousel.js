@@ -6,7 +6,7 @@ import { Strong } from '../shared/CustomStyled';
 
 const Carousel = ({ items }) => {
     const images = items.map((item, index) => (
-        <a key={index} style={{marginLeft: '6%'}} href={item.information} target='_blank' rel='noreferrer noopener'>
+        <a key={index} style={{ marginLeft: '6%' }} href={item.information} target='_blank' rel='noreferrer noopener'>
             <img className='zoom' src={item.image} alt='badge' />
         </a>
     ));
@@ -15,7 +15,7 @@ const Carousel = ({ items }) => {
         1: { items: 5 }
     };
     return (
-        <section className='carousel'>
+        <section className='carousel mb-5'>
             <Row className='pb-5'>
                 <h2>
                     <Strong>C</Strong>ertifications & Badges
@@ -26,6 +26,7 @@ const Carousel = ({ items }) => {
                 autoPlay
                 infinite
                 disableButtonsControls
+                disableDotsControls
                 mouseTracking
                 items={images}
                 responsive={responsive}

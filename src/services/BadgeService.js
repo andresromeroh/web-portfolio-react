@@ -12,7 +12,7 @@ class BadgeService extends BaseService {
     }
 
     async findAllBadges() {
-        const response = await this.client.get('/');
+        const response = await this.client.get('/non-expired');
         return response.data;
     }
 }

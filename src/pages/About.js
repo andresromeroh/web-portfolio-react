@@ -33,7 +33,7 @@ export default class About extends Component {
                             <PacmanLoader
                                 css={Spinnercss}
                                 size={20}
-                                color={"#f45b69"}
+                                color={"#ffbf69"}
                                 loading={this.state.loading}
                             />
                         </Container> :
