@@ -10,7 +10,7 @@ const MarginRow = styled(Row)`
 `
 const INTRO =
     <p className='intro-script'>
-        Hello there! I am <strong style={{ color: '#f45b69' }}>Andrés</strong>, I'm a Software Developer
+        Hello there! I am <strong style={{ color: '#ffbf69' }}>Andrés</strong>, I'm a Software Developer
         with passion for building high-quality, minimal and easy to use software solutions.
     </p>
 

@@ -13,8 +13,8 @@ export default function ProjectCard({ title, description, language, url }) {
             <div>
                 <small>
                     <strong>
-                        <a href={url} style={{ textDecoration: 'none', color: '#f45b69' }}>
-                            {' '}See more
+                        <a href={url} style={{ textDecoration: 'none', color: '#2ec4b6' }}>
+                            {' '}Project Details
                         </a>
                     </strong>
                 </small>

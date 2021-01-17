@@ -18,7 +18,15 @@ export default class Experience extends Component {
                                     </div>
                                     <div className="ml-auto mr-5 pr-5"><small><span className="period">02/2020 - Present</span></small></div>
                                 </div>
-                                <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget velit ultricies, feugiat est sed, efficitur nunc, vivamus vel accumsan dui.</p>
+                                <p className="text-muted">As a Software Developer at First Factory I am in charge of maintaining and developing software solutions for new and existing clients.</p>
+                                <small className="text-muted">
+                                    <ul>
+                                        <li>Develop new product features using JavaScript and NodeJS.</li>
+                                        <li>Deliver efficient code that meets business needs and client requirements.</li>
+                                        <li>Participate in Agile Scrum calls and meetings to evaluate and size upcoming features.</li>
+                                        <li>Collaborate with other developers and stake holders to create high quality solutions.</li>
+                                    </ul>
+                                </small>
                             </div>
                             <div className="item py-3">
                                 <div className="row">
@@ -28,7 +36,16 @@ export default class Experience extends Component {
                                     </div>
                                     <div className="ml-auto mr-5 pr-5"><small><span className="period">08/2019 - 02/2020</span></small></div>
                                 </div>
-                                <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget velit ultricies, feugiat est sed, efficitur nunc, vivamus vel accumsan dui.</p>
+                                <p className="text-muted">Collaborate with product teams and cross divisional teams to automate legacy procedures developing new web applications using open source technologies and internal IBM Dedicated Cloud services (CIO).</p>
+                                <small className="text-muted">
+                                    <ul>
+                                        <li>Develop RESTful services using NodeJS, Express, JWT, and IBM Cloudant.</li>
+                                        <li>Develop UI components with React including state management with Redux.</li>
+                                        <li>Configuration of Cloudant instances, development of new views and queries.</li>
+                                        <li>Configuration and integration of IBM Cloud Foundry for application deployments.</li>
+                                        <li>Configuration of CI/CD tools like Git and IBM Pipelines for application staging.</li>
+                                    </ul>
+                                </small>
                             </div>
                         </div>
                         <div className="education group">
@@ -43,7 +60,7 @@ export default class Experience extends Component {
                                     </div>
                                     <div className="ml-auto mr-5 pr-5"><small><span className="period">06/2019 - 06/2020</span></small></div>
                                 </div>
-                                <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget velit ultricies, feugiat est sed, efficitur nunc, vivamus vel accumsan dui.</p>
+                                <p className="text-muted">Graduated on 2020 in Heredia, Costa Rica.</p>
                             </div>
                             <div className="item py-3">
                                 <div className="row">
@@ -54,7 +71,7 @@ export default class Experience extends Component {
                                     </div>
                                     <div className="ml-auto mr-5 pr-5"><small><span className="period">06/2015 - 06/2019</span></small></div>
                                 </div>
-                                <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget velit ultricies, feugiat est sed, efficitur nunc, vivamus vel accumsan dui.</p>
+                                <p className="text-muted">Graduated on 2019 in Heredia, Costa Rica.</p>
                             </div>
                         </div>
                     </div>

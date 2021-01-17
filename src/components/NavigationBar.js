@@ -28,11 +28,11 @@ export default class NavigationBar extends Component {
     render() {
         return (
             <Navbar id='navbar' className='navbar-dark gradient' expand='lg' collapseOnSelect fixed='top'
-                style={{ opacity: `${this.state.opacity}`, display: this.state.hidden ? "none" : "", transition: 'opacity 0.25s' }}>
+                style={{ opacity: `${this.state.opacity}`, display: this.state.hidden ? "none" : "", transition: 'opacity 0.5s' }}>
                 <Container>
                     <Navbar.Brand className='logo brand' href='/'>
                         <span role='img' aria-label='computer'>
-                            💻 Andresromero.dev
+                            Andresromero.dev
                         </span>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />

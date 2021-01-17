@@ -37,7 +37,7 @@ export default class Projects extends Component {
             return [];
         } else {
             const jsx = repositories.map((repo, index) => {
-                if (index < 9) {
+                if (index < 6) {
                     return <Col md='6' lg='4' key={index}>
                         <ProjectCard
                             title={this.formatTitle(repo.name)}
@@ -70,7 +70,7 @@ export default class Projects extends Component {
                         <PacmanLoader
                             css={Spinnercss}
                             size={20}
-                            color={'#f45b69'}
+                            color={'#ffbf69'}
                             loading={this.state.loading}
                         />
                     </Container>
