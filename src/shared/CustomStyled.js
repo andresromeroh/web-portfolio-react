@@ -10,6 +10,6 @@ export const Spinnercss = css`
   display: block;
   margin: 0 auto;
   border-color: red;
-  margin-top: 10%;
+  margin-top: 15%;
   margin-bottom: 5%;
 `;
