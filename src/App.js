@@ -11,7 +11,6 @@ import {
 } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import Contact from './pages/Contact';
-import Experience from './pages/Experience';
 
 function App() {
     return (
@@ -21,7 +20,6 @@ function App() {
                 <Switch>
                     <Route path='/' exact component={About} />
                     <Route path='/projects' exact component={Projects} />
-                    <Route path='/experience' exact component={Experience} />
                     <Route path='/contact' exact component={Contact} />
                     <Route path='/*' component={NotFound} />
                 </Switch>

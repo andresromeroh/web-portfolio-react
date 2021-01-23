@@ -22,7 +22,7 @@ const Carousel = ({ items }) => {
                 </h2>
             </Row>
             <AliceCarousel
-                animationDuration={2000}
+                animationDuration={3000}
                 autoPlay
                 infinite
                 disableButtonsControls

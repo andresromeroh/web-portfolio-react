@@ -12,7 +12,7 @@ export default class NavigationBar extends Component {
     }
 
     componentDidMount() {
-        if (typeof window !== "undefined") {
+        if (typeof window !== 'undefined') {
             window.onscroll = () => {
                 let currentScrollPos = window.pageYOffset;
                 let maxScroll = document.body.scrollHeight - window.innerHeight;
@@ -28,20 +28,24 @@ export default class NavigationBar extends Component {
     render() {
         return (
             <Navbar id='navbar' className='navbar-dark gradient' expand='lg' collapseOnSelect fixed='top'
-                style={{ opacity: `${this.state.opacity}`, display: this.state.hidden ? "none" : "", transition: 'opacity 0.5s' }}>
+                style={{ opacity: `${this.state.opacity}`, display: this.state.hidden ? 'none' : '', transition: 'opacity 0.5s' }}>
                 <Container>
                     <Navbar.Brand className='logo brand' href='/'>
                         <span role='img' aria-label='computer'>
-                            Andresromero.dev
+                            @ Andresromero.dev
                         </span>
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
+                    <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+                    <Navbar.Collapse id='responsive-navbar-nav'>
                         <Nav className='nav navbar-nav ml-auto'>
-                            <Nav.Link href="/">About</Nav.Link>
-                            <Nav.Link href="/projects">Projects</Nav.Link>
-                            <Nav.Link href="/experience">Experience</Nav.Link>
-                            <Nav.Link href="/contact">Contact</Nav.Link>
+                            <Nav.Link href='/'>About Me</Nav.Link>
+                            <Nav.Link href='/projects'>Projects</Nav.Link>
+                            <Nav.Link href='/contact'>E-mail</Nav.Link>
+                            <Nav.Link
+                                target='_blank'
+                                href='https://www.linkedin.com/in/andresromeroh/'>
+                                LinkedIn
+                            </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
