@@ -20,6 +20,13 @@ class RepositoryService extends BaseService {
         const response = await this.client.get('/public');
         return response.data;
     }
+
+    async search(text, page, pageSize) {
+        const queryParams = `text=${text}&page=${page}&pageSize=${pageSize}`;
+        const searchParams = new URLSearchParams(queryParams);
+        const response = await this.client.post(`/search?${searchParams}`);
+        return response.data;
+    }
 }
 
 export default RepositoryService.Instance;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledFooter = styled.footer`
     font-family: Montserrat, sans-serif;
     text-align: center;
-    margin-bottom: 40px;
+    bottom: 0;
 `
 export default class Footer extends Component {
     render() {

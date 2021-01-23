@@ -8,8 +8,11 @@ import { FadeInDowDiv } from '../shared/CustomStyled';
 const MarginRow = styled(Row)`
     margin-top: 40px;
     position: relative;
-    @media only screen and (min-width: 768px) {
-        transform: translate(-5%, 0%);
+    @media (min-width: 768px) {
+        transform: translate(-4%, 0%);
+    }
+    @media (max-width: 768px) {
+        transform: translate(3%, 0%);
     }
 `
 const INTRO =

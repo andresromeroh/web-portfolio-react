@@ -1,19 +1,9 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Pagination } from 'react-bootstrap';
+import PacmanLoader from 'react-spinners/PacmanLoader';
+import { Container, Row, Col, Pagination, Spinner } from 'react-bootstrap';
 import ProjectCard from '../shared/ProjectCard';
 import RepositoryService from '../services/RepositoryService';
-import PacmanLoader from 'react-spinners/PacmanLoader';
 import { FadeInDiv, Spinnercss } from '../shared/CustomStyled';
-
-let active = 2;
-let items = [];
-for (let number = 1; number <= 5; number++) {
-    items.push(
-        <Pagination.Item key={number} active={number === active}>
-            {number}
-        </Pagination.Item>,
-    );
-}
 
 export default class Projects extends Component {
 
@@ -21,14 +11,27 @@ export default class Projects extends Component {
         super(props)
 
         this.state = {
+            isLoading: true,
             repositories: [],
-            isLoading: true
+            currentPage: 1,
+            totalPages: 0,
+            isChangingPage: false,
+            pageSize: 6,
+            totalProjects: 0
         }
     }
 
     componentDidMount = async () => {
-        const repositories = await RepositoryService.findAllPublic();
-        this.setState(() => ({ repositories, isLoading: false }));
+        const { currentPage, pageSize } = this.state;
+        const paginationData =
+            await RepositoryService.search('', currentPage, pageSize);
+        this.setState(() => ({
+            isLoading: false,
+            repositories: paginationData.repositories,
+            currentPage: paginationData.page,
+            totalPages: paginationData.pages,
+            totalProjects: paginationData.pages * pageSize
+        }));
     }
 
     getRepositories = () => {
@@ -41,7 +44,6 @@ export default class Projects extends Component {
                     return <Col md='6' lg='4' key={index}>
                         <ProjectCard
                             title={this.formatTitle(repo.name)}
-                            // description={repo.description}
                             language={repo.language}
                             url={repo.htmlUrl}
                         />
@@ -53,16 +55,49 @@ export default class Projects extends Component {
         }
     }
 
+    getPagination = () => {
+        const { totalPages, currentPage } = this.state;
+        let items = [];
+        for (let number = 1; number <= totalPages; number++) {
+            items.push(
+                <Pagination.Item
+                    key={number}
+                    active={number === currentPage}
+                    onClick={this.onPageClick}
+                >
+                    {number}
+                </Pagination.Item>,
+            );
+        }
+        return items;
+    }
+
     formatTitle = (title) => {
         const formatedTitle = title.replaceAll('-', ' ').toUpperCase();
-        if (formatedTitle.length > 15) {
-            const splitted = formatedTitle.slice(0, 20);
-            return splitted;
+        return formatedTitle.length > 15 ? formatedTitle.slice(0, 20) : formatedTitle;
+    }
+
+    onPageClick = async ({ target }) => {
+        this.setState(() => ({ isChangingPage: true }));
+        const { currentPage, pageSize } = this.state;
+        if (target.innerText.includes(currentPage)) {
+            this.setState(() => ({ isChangingPage: false }));
+            return;
         }
-        return formatedTitle;
+        const paginationData =
+            await RepositoryService.search('', target.innerText, pageSize);
+        setTimeout(() => {
+            this.setState(() => ({
+                repositories: paginationData.repositories,
+                totalProjects: paginationData.pages * pageSize,
+                currentPage: paginationData.page,
+                isChangingPage: false
+            }))
+        }, 250)
     }
 
     render() {
+        const { totalProjects, isChangingPage } = this.state;
         return (
             <React.Fragment>
                 {this.state.isLoading ?
@@ -78,17 +113,17 @@ export default class Projects extends Component {
                     <Container className='projects-block'>
                         <FadeInDiv>
                             <Row className='pt-5 pl-5'>
-                                <h2>
-                                    Coding Projects
-                            </h2>
+                                <h2>Coding Projects</h2>
+                                {isChangingPage
+                                    && <Spinner className='ml-auto mr-5' animation='border' />}
                             </Row>
                             <Row className='p-5'>
                                 {this.getRepositories()}
                                 <Row className='ml-3 mt-2'>
-                                    <h6>Projects: 1 to 9</h6>
+                                    <h6><b>Total: {totalProjects}</b></h6>
                                 </Row>
                                 <Row className='ml-auto mr-3 mt-1'>
-                                    <Pagination>{items}</Pagination>
+                                    <Pagination>{this.getPagination()}</Pagination>
                                 </Row>
                             </Row>
                         </FadeInDiv>
