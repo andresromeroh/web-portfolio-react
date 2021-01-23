@@ -6,19 +6,22 @@ import styled from 'styled-components';
 import { FadeInDowDiv } from '../shared/CustomStyled';
 
 const MarginRow = styled(Row)`
-    margin-top: 40px
+    margin: 40px;
+    position: relative;
+    @media only screen and (min-width: 768px) {
+        transform: translate(-5%, 0%);
+    }
 `
 const INTRO =
     <p className='intro-script'>
-        Hello there! I am <strong style={{ color: '#ffbf69' }}>Andrés</strong>, I'm a Software Developer
-        with passion for building high-quality, minimal and easy to use software solutions.
+        Hello there! I am <strong style={{ color: '#ef233c' }}>Andrés</strong>, I'm a Software Developer with passion for building high-quality, minimal and easy to use software solutions and applications.
     </p>
 
 export default class ProfileIntro extends Component {
     render() {
         return (
             <section className='profile-intro'>
-                <Row className='pb-2'>
+                <Row className='pb-1'>
                     <Col sm='12' md='6' lg='6' xl='6'>
                         <FadeInDowDiv>
                             <Row>
@@ -26,21 +29,13 @@ export default class ProfileIntro extends Component {
                                     {INTRO}
                                 </Col>
                             </Row>
-                            <MarginRow>
+                            <MarginRow className='align-items-center text-center'>
                                 <Col>
                                     <StandardButton
-                                        text='Check my Projects'
+                                        text='CHECK MY PROJECTS'
                                         size='lg'
-                                        isLink
                                         action='/projects'
-                                    />
-                                </Col>
-                                <Col>
-                                    <StandardButton
-                                        text='Send me an Email'
-                                        size='lg'
-                                        isLink
-                                        action='/contact'
+                                        isLink={true}
                                     />
                                 </Col>
                             </MarginRow>

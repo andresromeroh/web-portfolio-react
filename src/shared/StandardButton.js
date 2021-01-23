@@ -11,7 +11,8 @@ export default function StandardButton({ text, size, isLink, action, className =
                     <Button
                         className={className ? `standard-btn ${className}` : 'standard-btn'}
                         size={size}
-                        variant='outline-primary'
+                        variant='primary'
+                        block
                     >
                         {text}
                     </Button>
@@ -25,7 +26,8 @@ export default function StandardButton({ text, size, isLink, action, className =
                     className={className ? `standard-btn ${className}` : 'standard-btn'}
                     onClick={action}
                     size={size}
-                    variant='outline-primary'
+                    variant='primary'
+                    block
                 >
                     {text}
                 </Button>
