@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { FadeInDowDiv } from '../shared/CustomStyled';
 
 const MarginRow = styled(Row)`
-    margin: 40px;
+    margin-top: 40px;
     position: relative;
     @media only screen and (min-width: 768px) {
         transform: translate(-5%, 0%);
