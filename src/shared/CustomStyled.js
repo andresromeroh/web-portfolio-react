@@ -11,5 +11,5 @@ export const Spinnercss = css`
   margin: 0 auto;
   border-color: red;
   margin-top: 15%;
-  margin-bottom: 5%;
+  margin-bottom: 8%;
 `;
