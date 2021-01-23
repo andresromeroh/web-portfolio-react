@@ -70,7 +70,7 @@ export default class Projects extends Component {
                         <PacmanLoader
                             css={Spinnercss}
                             size={20}
-                            color={'#ffbf69'}
+                            color={'#ef233c'}
                             loading={this.state.loading}
                         />
                     </Container>
