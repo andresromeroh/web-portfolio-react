@@ -117,8 +117,10 @@ export default class Projects extends Component {
                                 {isChangingPage
                                     && <Spinner className='ml-auto mr-5' animation='border' />}
                             </Row>
-                            <Row className='p-5'>
+                            <Row className='pt-5 px-5 pb-3'>
                                 {this.getRepositories()}
+                            </Row>
+                            <Row className='pb-5 px-5'>
                                 <Row className='ml-3 mt-2'>
                                     <h6><b>Total: {totalProjects}</b></h6>
                                 </Row>
