@@ -8,8 +8,14 @@ export const FadeInDowDiv = styled.div`animation: 2s ${keyframes`${fadeInDown}`}
 
 export const Spinnercss = css`
   margin: 0 auto;
+  @media (min-width: 768px) {
+    margin-top: 20%;
+    margin-bottom: 15%;
+  }
+  @media (max-width: 768px) {
+    margin-top: 28%;
+    margin-bottom: 15%;
+  }
   display: block;
   border-color: red;
-  margin-top: 17%;
-  margin-bottom: 10%;
 `;
