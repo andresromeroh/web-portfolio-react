@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
-// Primary Button for Key Actions
 export default function PrimaryButton({ text, size, action, disabled, className = '' }) {
     return (
         <React.Fragment>

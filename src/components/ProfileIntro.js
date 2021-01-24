@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import StandardButton from '../shared/StandardButton';
+import LinkButton from '../shared/LinkButton';
 import Avatar from '../assets/images/development.png';
 import styled from 'styled-components';
 import { FadeInDowDiv } from '../shared/CustomStyled';
@@ -34,11 +34,10 @@ export default class ProfileIntro extends Component {
                             </Row>
                             <MarginRow className='align-items-center text-center'>
                                 <Col>
-                                    <StandardButton
+                                    <LinkButton
                                         text='CHECK MY PROJECTS'
                                         size='lg'
                                         action='/projects'
-                                        isLink={true}
                                     />
                                 </Col>
                             </MarginRow>

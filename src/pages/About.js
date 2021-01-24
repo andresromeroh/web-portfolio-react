@@ -3,7 +3,7 @@ import ProfileIntro from '../components/ProfileIntro';
 import SkillSet from '../components/SkillSet';
 import Carousel from '../components/Carousel';
 import BadgeService from '../services/BadgeService';
-import PacmanLoader from "react-spinners/PacmanLoader";
+import PacmanLoader from 'react-spinners/PacmanLoader';
 import { Container } from 'react-bootstrap';
 import { FadeInDiv, Spinnercss } from '../shared/CustomStyled';
 
@@ -33,7 +33,7 @@ export default class About extends Component {
                             <PacmanLoader
                                 css={Spinnercss}
                                 size={20}
-                                color={"#ef233c"}
+                                color={'#ef233c'}
                                 loading={this.state.loading}
                             />
                         </Container> :

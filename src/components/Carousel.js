@@ -6,7 +6,13 @@ import { Strong } from '../shared/CustomStyled';
 
 const Carousel = ({ items }) => {
     const images = items.map((item, index) => (
-        <a key={index} style={{ marginLeft: '6%' }} href={item.information} target='_blank' rel='noreferrer noopener'>
+        <a 
+            key={index} 
+            style={{ marginLeft: '6%' }} 
+            href={item.information}
+            target='_blank'
+            rel='noreferrer noopener'
+        >
             <img className='zoom' src={item.image} alt='badge' />
         </a>
     ));

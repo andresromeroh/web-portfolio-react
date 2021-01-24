@@ -7,9 +7,9 @@ export const FadeInDiv = styled.div`animation: 2s ${keyframes`${fadeIn}`};`;
 export const FadeInDowDiv = styled.div`animation: 2s ${keyframes`${fadeInDown}`};`;
 
 export const Spinnercss = css`
-  display: block;
   margin: 0 auto;
+  display: block;
   border-color: red;
-  margin-top: 15%;
-  margin-bottom: 8%;
+  margin-top: 17%;
+  margin-bottom: 10%;
 `;
