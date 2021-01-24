@@ -32,6 +32,17 @@ body {
   margin-right: 17px !important;
 }
 
+.span-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.span-link {
+  display: inline-block;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 2px;
+}
+
 /* ProfileIntro */
 
 .portfolio-block {
@@ -189,7 +200,7 @@ a, a:visited, a:active { color: inherit; }
 .zoom:hover {
   /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   transform: scale(1.2);
-  filter: grayscale(35%);
+  filter: grayscale(30%);
 }
 
 /* Projects and GitHub */

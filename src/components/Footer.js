@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
@@ -21,8 +21,14 @@ export default class Footer extends Component {
                 <div className='links'>
                     <a className='p-3' href='/'>About</a>
                     <a className='p-3' href='/projects'>Projects</a>
-                    <a className='p-3' href='/contact'>Email</a>
-                    <a className='p-3' href='/projects'>GitHub</a>
+                    <a className='p-3' href='/contact'>E-mail</a>
+                    <a 
+                        className='p-3' 
+                        href='https://www.linkedin.com/in/andresromeroh/' 
+                        target='_blank'
+                        rel='noreferrer'>
+                        LinkedIn
+                    </a>
                 </div>
             </StyledFooter>
         )

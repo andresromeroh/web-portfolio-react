@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { css } from "@emotion/core";
+import { css } from '@emotion/core';
 import { fadeIn, fadeInDown } from 'react-animations';
 
 export const Strong = styled.strong`color: #ef233c`;

@@ -8,8 +8,7 @@ import { FadeInDiv, Spinnercss } from '../shared/CustomStyled';
 export default class Projects extends Component {
 
     constructor(props) {
-        super(props)
-
+        super(props);
         this.state = {
             isLoading: true,
             repositories: [],

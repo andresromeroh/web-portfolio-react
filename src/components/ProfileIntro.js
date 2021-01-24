@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import { Row, Col } from 'react-bootstrap';
 import LinkButton from '../shared/LinkButton';
 import Avatar from '../assets/images/development.png';
-import styled from 'styled-components';
 import { FadeInDowDiv } from '../shared/CustomStyled';
 
 const MarginRow = styled(Row)`
@@ -28,9 +28,7 @@ export default class ProfileIntro extends Component {
                     <Col sm='12' md='6' lg='6' xl='6'>
                         <FadeInDowDiv>
                             <Row>
-                                <Col>
-                                    {INTRO}
-                                </Col>
+                                <Col>{INTRO}</Col>
                             </Row>
                             <MarginRow className='align-items-center text-center'>
                                 <Col>

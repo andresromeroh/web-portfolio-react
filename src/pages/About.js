@@ -10,8 +10,7 @@ import { FadeInDiv, Spinnercss } from '../shared/CustomStyled';
 export default class About extends Component {
 
     constructor(props) {
-        super(props)
-
+        super(props);
         this.state = {
             badges: [],
             isLoading: true

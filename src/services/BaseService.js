@@ -20,7 +20,7 @@ export default class BaseService {
     initUrl(baseUrl) {
         if (process.env.NODE_ENV === 'development') {
             return `http://localhost:5000/api/v1${baseUrl}`;
-        } else { // if not dev -> prod :D
+        } else { // if not dev -> prod
             return `https://andresromero-dev.herokuapp.com/api/v1${baseUrl}`;
         }
     }

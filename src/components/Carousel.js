@@ -1,8 +1,8 @@
 import React from 'react';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import AliceCarousel from 'react-alice-carousel';
-import { Row } from 'react-bootstrap';
 import { Strong } from '../shared/CustomStyled';
+import { Row } from 'react-bootstrap';
 
 const Carousel = ({ items }) => {
     const images = items.map((item, index) => (
