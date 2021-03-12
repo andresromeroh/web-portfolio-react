@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import Dog from '../assets/images/dog_ate_page.png';
+import Dog from '../assets/images/404.png';
 
 export default class ProfileIntro extends Component {
     render() {

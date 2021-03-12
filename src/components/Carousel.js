@@ -1,12 +1,18 @@
 import React from 'react';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import AliceCarousel from 'react-alice-carousel';
-import { Row } from 'react-bootstrap';
 import { Strong } from '../shared/CustomStyled';
+import { Row } from 'react-bootstrap';
 
 const Carousel = ({ items }) => {
     const images = items.map((item, index) => (
-        <a key={index} style={{ marginLeft: '6%' }} href={item.information} target='_blank' rel='noreferrer noopener'>
+        <a 
+            key={index} 
+            style={{ marginLeft: '6%' }} 
+            href={item.information}
+            target='_blank'
+            rel='noreferrer noopener'
+        >
             <img className='zoom' src={item.image} alt='badge' />
         </a>
     ));
@@ -15,7 +21,7 @@ const Carousel = ({ items }) => {
         1: { items: 5 }
     };
     return (
-        <section className='carousel mb-5'>
+        <section className='carousel mb-5 pb-5'>
             <Row className='pb-5'>
                 <h2>
                     <Strong>C</Strong>ertifications & Badges

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import SkillCard from '../shared/SkillCard';
 import { Strong } from '../shared/CustomStyled';
-import { BACKEND_DESCRIPTION, FRONTEND_DESCRIPTION, CLOUD_DESCRIPTION } from '../global/Constants';
-import { BACKEND_ICON, FRONTEND_ICON, CLOUD_ICON } from '../global/IconNames';
+import { BACKEND_DESCRIPTION, FRONTEND_DESCRIPTION, CLOUD_DESCRIPTION,
+    BACKEND_ICON, FRONTEND_ICON, CLOUD_ICON } from '../global/Constants';
 
 export default class SkillSet extends Component {
     render() {

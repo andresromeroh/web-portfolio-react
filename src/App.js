@@ -1,16 +1,12 @@
 import React from 'react';
 import Footer from './components/Footer';
 import NavigationBar from './components/NavigationBar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import NotFound from './pages/NotFound';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-} from 'react-router-dom';
-import { Container } from 'react-bootstrap';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 function App() {
     return (

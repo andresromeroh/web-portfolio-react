@@ -2,9 +2,8 @@ import React from 'react';
 
 export default function ProjectCard({ title, description, language, url }) {
     return (
-        <div className="project-card-no-image">
+        <div className='project-card-no-image'>
             <h6><strong>{title}</strong></h6>
-            <p>{description}</p>
             <div>
                 <small>
                     Coding Language: {language}
