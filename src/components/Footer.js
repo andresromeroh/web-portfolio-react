@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
 export default class Footer extends Component {
     render() {
         return (
-            <StyledFooter>
+            <StyledFooter className='mobile-hide'>
                 <div>
                     <small>
                         <span role='img' aria-label='Made by Andres Romero'>
