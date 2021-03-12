@@ -15,9 +15,12 @@ body {
 
 /* Spinner - Loading */
 
-.pacman-spinner {
-  padding-top: 60px;
-  padding-bottom: 75px;
+.application-spinner {
+  position: fixed;
+  right: 50%;
+  top: 40%;
+  z-index: 4000;
+  opacity: 1;
 }
 
 /* Navigation Bar */

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import PacmanLoader from 'react-spinners/PacmanLoader';
 import { Container, Row, Col, Pagination, Spinner } from 'react-bootstrap';
 import ProjectCard from '../shared/ProjectCard';
 import RepositoryService from '../services/RepositoryService';
-import { FadeInDiv, Spinnercss } from '../shared/CustomStyled';
+import { FadeInDiv } from '../shared/CustomStyled';
+import AppSpinner from '../shared/AppSpinner';
 
 export default class Projects extends Component {
 
@@ -100,14 +100,7 @@ export default class Projects extends Component {
         return (
             <React.Fragment>
                 {this.state.isLoading ?
-                    <Container className='pacman-spinner'>
-                        <PacmanLoader
-                            css={Spinnercss}
-                            size={20}
-                            color={'#ef233c'}
-                            loading={this.state.loading}
-                        />
-                    </Container>
+                    <AppSpinner />
                     :
                     <Container className='projects-block'>
                         <FadeInDiv>

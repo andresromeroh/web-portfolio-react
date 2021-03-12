@@ -3,9 +3,9 @@ import ProfileIntro from '../components/ProfileIntro';
 import SkillSet from '../components/SkillSet';
 import Carousel from '../components/Carousel';
 import BadgeService from '../services/BadgeService';
-import PacmanLoader from 'react-spinners/PacmanLoader';
 import { Container } from 'react-bootstrap';
-import { FadeInDiv, Spinnercss } from '../shared/CustomStyled';
+import AppSpinner from '../shared/AppSpinner';
+import { FadeInDiv } from '../shared/CustomStyled';
 
 export default class About extends Component {
 
@@ -23,20 +23,13 @@ export default class About extends Component {
     }
 
     render() {
-        const { badges } = this.state;
+        const { badges, isLoading } = this.state;
         return (
             <React.Fragment>
                 {
-                    this.state.isLoading ?
-                        <Container className='pacman-spinner'>
-                            <PacmanLoader
-                                css={Spinnercss}
-                                size={20}
-                                color={'#ef233c'}
-                                loading={this.state.loading}
-                            />
-                        </Container> :
-                        <Container className='portfolio-block .block-intro'>
+                    isLoading ?
+                        <AppSpinner /> :
+                        <Container className='portfolio-block'>
                             <FadeInDiv>
                                 <ProfileIntro />
                                 <SkillSet />
