@@ -187,6 +187,21 @@ a, a:visited, a:active { color: inherit; }
   margin-bottom: 30px;
 }
 
+/* Acclaim Badges */
+@media only screen and (max-width: 720px) {
+  .carousel-items { 
+    margin-bottom: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+}
+
+@media only screen and (min-width: 725px) {
+  .carousel-items { 
+    margin-bottom: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
 /* Utilities */
 
 @media only screen and (max-width: 720px) {
