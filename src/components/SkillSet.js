@@ -11,7 +11,7 @@ export default class SkillSet extends Component {
             <section className='skill-set'>
                 <Row className='pb-5'>
                     <h2>
-                        <Strong>S</Strong>oftware Development Skills
+                        <Strong>D</Strong>evelopment Skills
                     </h2>
                 </Row>
                 <Row>
