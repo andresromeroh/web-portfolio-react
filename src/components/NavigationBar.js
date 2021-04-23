@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
+import { Strong } from '../shared/CustomStyled';
 
 class NavigationBar extends Component {
 
@@ -35,7 +36,7 @@ class NavigationBar extends Component {
                 <Container>
                     <Navbar.Brand className='logo brand' href='/'>
                         <span className='span-title'>
-                            @ Andresromero.dev
+                            <Strong>{'</>'}</Strong> Andresromero.dev
                         </span>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls='responsive-navbar-nav' />
@@ -48,7 +49,7 @@ class NavigationBar extends Component {
                             </Nav.Link>
                             <Nav.Link name='projects' href='/projects'>
                                 <span className={ currentPage === '/projects' ? 'span-link' : '' }>
-                                    Projects
+                                    GitHub Projects
                                 </span>
                             </Nav.Link>
                             <Nav.Link name='email' href='/contact'>

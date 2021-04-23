@@ -17,9 +17,9 @@ const MarginRow = styled(Row)`
 `
 const INTRO =
     <p className='intro-script'>
-        Hello there! I am <strong style={{ color: '#ef233c' }}>Andrés</strong>, 
-        I'm a Costa Rican Software Developer with passion for building high-quality, 
-        minimal and easy to use software solutions.
+        Hello! I am <strong style={{ color: '#ef233c' }}>Andrés</strong>. 
+        I'm a Full-Stack Software Engineer based in Heredia, Costa Rica. 
+        Passionate about Cloud and Web technologies.
     </p>
 
 export default class ProfileIntro extends Component {

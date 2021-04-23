@@ -13,6 +13,10 @@ body {
   padding-top: 50px;
 }
 
+a:hover, a:visited {
+  color: #212529;
+}
+
 /* Spinner - Loading */
 
 .application-spinner {
@@ -41,9 +45,9 @@ body {
 }
 
 .span-link {
-  display: inline-block;
-  border-bottom: 1px solid #ffffff;
   padding-bottom: 2px;
+  display: inline-block;
+  border-bottom: 3px solid #ef233c;
 }
 
 /* ProfileIntro */
@@ -212,7 +216,7 @@ a, a:visited, a:active { color: inherit; }
   padding: 12px;
   transition: transform .5s; /* Animation */
   margin: 0 auto;
-  filter: grayscale(90%);
+  filter: grayscale(95%);
 }
 
 .zoom:hover {

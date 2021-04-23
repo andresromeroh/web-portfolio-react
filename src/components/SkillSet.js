@@ -11,7 +11,7 @@ export default class SkillSet extends Component {
             <section className='skill-set'>
                 <Row className='pb-5'>
                     <h2>
-                        <Strong>D</Strong>evelopment Skills
+                        <Strong>What</Strong> can I do ?
                     </h2>
                 </Row>
                 <Row>
@@ -32,7 +32,7 @@ export default class SkillSet extends Component {
                     <Col sm='12' md='4' lg='4' xl='4'>
                         <SkillCard
                             icon={CLOUD_ICON}
-                            header='Cloud Services'
+                            header='Cloud Applications'
                             text={CLOUD_DESCRIPTION}
                         />
                     </Col>
