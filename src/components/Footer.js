@@ -21,7 +21,7 @@ export default class Footer extends Component {
             <StyledFooter className='mobile-hide'>
                 <div className='links' style={{ marginTop: '1%', marginBottom: '1%' }}>
                     <a className='p-3' href='/'>About Me</a>
-                    <a className='p-3' href='/projects'>Projects</a>
+                    <a className='p-3' href='/projects'>GitHub Projects</a>
                     <a className='p-3' href='/contact'>E-mail</a>
                     <a
                         className='p-3'

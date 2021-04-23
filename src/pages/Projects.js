@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Pagination, Spinner } from 'react-bootstrap';
 import ProjectCard from '../shared/ProjectCard';
 import RepositoryService from '../services/RepositoryService';
-import { FadeInDiv } from '../shared/CustomStyled';
+import { FadeInDiv, Strong } from '../shared/CustomStyled';
 import AppSpinner from '../shared/AppSpinner';
 
 export default class Projects extends Component {
@@ -91,7 +91,8 @@ export default class Projects extends Component {
                 totalProjects: paginationData.pages * pageSize,
                 currentPage: paginationData.page,
                 isChangingPage: false
-            }))
+            }));
+            window.scroll(0, 0);
         }, 250)
     }
 
@@ -105,9 +106,15 @@ export default class Projects extends Component {
                     <Container className='projects-block'>
                         <FadeInDiv>
                             <Row className='pt-5 pl-5'>
-                                <h2>Coding Projects</h2>
+                                <Col md='11' lg='11'>
+                                    <h2><Strong>GitHub</Strong> Projects</h2>
+                                </Col>
                                 {isChangingPage
-                                    && <Spinner className='ml-auto mr-5' animation='border' />}
+                                    && 
+                                    <Col md='1' lg='1'>
+                                        <Spinner className='ml-auto mr-5 mt-1' animation='border' />
+                                    </Col>
+                                }
                             </Row>
                             <Row className='pt-5 px-5 pb-3'>
                                 {this.getRepositories()}
@@ -116,7 +123,7 @@ export default class Projects extends Component {
                                 <Row className='ml-3 mt-2'>
                                     <h6><b>Total: {totalProjects}</b></h6>
                                 </Row>
-                                <Row className='ml-auto mr-3 mt-1'>
+                                <Row className='ml-auto ml-5 mt-1'>
                                     <Pagination>{this.getPagination()}</Pagination>
                                 </Row>
                             </Row>

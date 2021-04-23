@@ -24,7 +24,7 @@ const Carousel = ({ items }) => {
         <section className='carousel carousel-items'>
             <Row className='pb-5'>
                 <h2>
-                    <Strong>D</Strong>igital Credentials
+                    <Strong>Digital</Strong> Credentials
                 </h2>
             </Row>
             <AliceCarousel

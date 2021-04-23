@@ -3,6 +3,7 @@ import { Form, Container, Row, Col } from 'react-bootstrap';
 import { EMAIL_SUCCESS } from '../global/Notifications';
 import EmailService from '../services/EmailService';
 import SubmitButton from '../shared/SubmitButton';
+import { Strong } from '../shared/CustomStyled';
 import swal from 'sweetalert2';
 import hold from 'holddotjs';
 
@@ -49,7 +50,7 @@ export default class Contact extends Component {
                 <Row>
                     <Col md={{ span: 12, offset: 2 }}>
                         <Row className='mt-5 mb-3'>
-                            <h2>Contact Me</h2>
+                            <h2><Strong>E</Strong>-mail</h2>
                         </Row>
                         <Row>
                             <Form onSubmit={this.handleSubmit}>
@@ -63,7 +64,6 @@ export default class Contact extends Component {
                                         className='browser-default custom-select'>
                                         <option>Business Inquiry</option>
                                         <option>Freelance Project</option>
-                                        <option>Just to say hi!</option>
                                         <option>Software Question</option>
                                     </Form.Control>
                                 </Form.Group>
@@ -72,7 +72,7 @@ export default class Contact extends Component {
                                     <Form.Control
                                         name='from'
                                         type='email'
-                                        placeholder='someusername@gmail.com'
+                                        placeholder='some_username@gmail.com'
                                         htmlSize={75}
                                         value={from}
                                         onChange={this.onInputChange}
@@ -88,17 +88,18 @@ export default class Contact extends Component {
                                     <Form.Control
                                         as='textarea'
                                         name='text'
-                                        rows={3}
+                                        rows={5}
                                         htmlSize={75}
                                         value={text}
                                         onChange={this.onInputChange}
                                         required
                                         autoComplete='off'
                                         maxLength={300}
+                                        style={{ resize: 'none' }}
                                     />
                                 </Form.Group>
                                 <Col className='mt-5' md={{ span: 8, offset: 2 }}>
-                                    <SubmitButton text='Send E-mail' size='lg'/>
+                                    <SubmitButton text='SEND' size='lg'/>
                                 </Col>
                             </Form>
                         </Row>
