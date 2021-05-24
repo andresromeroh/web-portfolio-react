@@ -1,43 +1,44 @@
-import React, { Component } from 'react'
-import ProfileIntro from '../components/ProfileIntro';
+import React, { useState, useEffect } from 'react'
+
+import Intro from '../components/Intro';
 import SkillSet from '../components/SkillSet';
 import Carousel from '../components/Carousel';
-import BadgeService from '../services/BadgeService';
-import { Container } from 'react-bootstrap';
+
 import AppSpinner from '../shared/AppSpinner';
 import { FadeInDiv } from '../shared/CustomStyled';
+import { Container } from 'react-bootstrap';
 
-export default class About extends Component {
+import BadgeService from '../services/BadgeService';
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            badges: [],
-            isLoading: true
+const About = () => {
+
+    const [badges, setBadges] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchBadges = async () => {
+            const badges = await BadgeService.findAllBadges();
+            setBadges(badges);
+            setLoading(false);
         }
-    }
 
-    componentDidMount = async () => {
-        const badges = await BadgeService.findAllBadges();
-        this.setState({ badges, isLoading: false });
-    }
+        fetchBadges();
+    }, []);
 
-    render() {
-        const { badges, isLoading } = this.state;
-        return (
-            <React.Fragment>
-                {
-                    isLoading ?
-                        <AppSpinner /> :
-                        <Container className='portfolio-block'>
-                            <FadeInDiv>
-                                <ProfileIntro />
-                                <SkillSet />
-                                <Carousel items={badges} />
-                            </FadeInDiv>
-                        </Container>
-                }
-            </React.Fragment>
-        )
-    }
+    return (
+        <>
+            {
+                loading ? <AppSpinner /> :
+                    <Container className='portfolio-block'>
+                        <FadeInDiv>
+                            <Intro />
+                            <SkillSet />
+                            <Carousel items={badges} />
+                        </FadeInDiv>
+                    </Container>
+            }
+        </>
+    )
 }
+
+export default About;

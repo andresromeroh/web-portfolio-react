@@ -17,12 +17,12 @@ const MarginRow = styled(Row)`
 `
 const INTRO =
     <p className='intro-script'>
-        Hello! I am <strong style={{ color: '#ef233c' }}>Andrés</strong>. 
-        I'm a Full-Stack Software Engineer based in Heredia, Costa Rica. 
+        Hello! I am <strong style={{ color: '#ef233c' }}>Andrés</strong>.
+        I'm a Full-Stack Software Engineer based in Heredia, Costa Rica.
         Passionate about Cloud and Web technologies.
     </p>
 
-export default class ProfileIntro extends Component {
+export default class Intro extends Component {
     render() {
         return (
             <section className='profile-intro'>
