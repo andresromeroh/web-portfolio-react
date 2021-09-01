@@ -43,7 +43,7 @@ export default class Projects extends Component {
                     return <Col md='6' lg='4' key={index}>
                         <ProjectCard
                             title={this.formatTitle(repo.name)}
-                            language={repo.language}
+                            language={repo.language ? repo.language : 'Markdown'}
                             url={repo.htmlUrl}
                         />
                     </Col>
