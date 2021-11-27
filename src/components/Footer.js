@@ -22,7 +22,7 @@ export default class Footer extends Component {
                 <div className='links' style={{ marginTop: '1%', marginBottom: '1%' }}>
                     <a className='p-3' href='/'>About Me</a>
                     <a className='p-3' href='/projects'>Projects</a>
-                    <a className='p-3' href='/contact'>E-mail</a>
+                    <a className='p-3' href='/contact'>Contact</a>
                     <a
                         className='p-3'
                         href='https://www.linkedin.com/in/andresromeroh/'

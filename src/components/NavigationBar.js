@@ -54,7 +54,7 @@ class NavigationBar extends Component {
                             </Nav.Link>
                             <Nav.Link name='email' href='/contact'>
                                 <span className={ currentPage === '/contact' ? 'span-link' : '' }>
-                                    E-mail
+                                    Contact
                                 </span>
                             </Nav.Link>
                             <Nav.Link target='_blank' href='https://www.linkedin.com/in/andresromeroh/'>

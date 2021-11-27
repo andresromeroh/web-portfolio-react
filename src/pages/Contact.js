@@ -50,7 +50,7 @@ export default class Contact extends Component {
                 <Row>
                     <Col md={{ span: 12, offset: 2 }}>
                         <Row className='mt-5 mb-3'>
-                            <h2><Strong>E</Strong>-mail</h2>
+                            <h2><Strong>C</Strong>ontact</h2>
                         </Row>
                         <Row>
                             <Form onSubmit={this.handleSubmit}>
@@ -72,7 +72,7 @@ export default class Contact extends Component {
                                     <Form.Control
                                         name='from'
                                         type='email'
-                                        placeholder='youraddress@mail.com'
+                                        placeholder='Enter your email address'
                                         htmlSize={75}
                                         value={from}
                                         onChange={this.onInputChange}
@@ -89,6 +89,7 @@ export default class Contact extends Component {
                                         as='textarea'
                                         name='text'
                                         rows={5}
+                                        placeholder='What would you like to discuss?'
                                         htmlSize={75}
                                         value={text}
                                         onChange={this.onInputChange}
