@@ -72,7 +72,7 @@ export default class Contact extends Component {
                                     <Form.Control
                                         name='from'
                                         type='email'
-                                        placeholder='some_username@gmail.com'
+                                        placeholder='youraddress@mail.com'
                                         htmlSize={75}
                                         value={from}
                                         onChange={this.onInputChange}
