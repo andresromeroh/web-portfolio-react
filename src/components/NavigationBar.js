@@ -44,7 +44,7 @@ class NavigationBar extends Component {
                         <Nav className='nav navbar-nav ml-auto'>
                             <Nav.Link name='about' href='/'>
                                 <span className={ currentPage === '/' ? 'span-link' : '' }>
-                                    About Me
+                                    About
                                 </span>
                             </Nav.Link>
                             <Nav.Link name='projects' href='/projects'>
