@@ -8,7 +8,7 @@ export default class BaseService {
 
     constructor(baseUrl) {
         this.baseUrl = this.initUrl(baseUrl);
-        this.timeout = 30000; // 30s by default for now
+        this.timeout = 30000;
         this.headers = {};
         this.client = axios.create({
             baseURL: this.baseUrl,
@@ -20,7 +20,7 @@ export default class BaseService {
     initUrl(baseUrl) {
         if (process.env.NODE_ENV === 'development') {
             return `http://localhost:5000/api/v1${baseUrl}`;
-        } else { // if not dev -> prod
+        } else {
             return `https://andresromero-dev.herokuapp.com/api/v1${baseUrl}`;
         }
     }
