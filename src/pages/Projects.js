@@ -107,7 +107,7 @@ export default class Projects extends Component {
                         <FadeInDiv>
                             <Row className='pt-5 pl-5'>
                                 <Col md='11' lg='11'>
-                                    <h2><Strong>GitHub</Strong> Projects</h2>
+                                    <h2><Strong>P</Strong>rojects</h2>
                                 </Col>
                                 {isChangingPage
                                     && 

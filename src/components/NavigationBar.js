@@ -49,7 +49,7 @@ class NavigationBar extends Component {
                             </Nav.Link>
                             <Nav.Link name='projects' href='/projects'>
                                 <span className={ currentPage === '/projects' ? 'span-link' : '' }>
-                                    GitHub Projects
+                                    Projects
                                 </span>
                             </Nav.Link>
                             <Nav.Link name='email' href='/contact'>
