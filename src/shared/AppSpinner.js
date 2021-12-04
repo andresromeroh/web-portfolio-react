@@ -7,7 +7,7 @@ export default class AppSpinner extends Component {
         return (
             <React.Fragment>
                 <div className="application-spinner">
-                    <RingLoader css={Spinnercss} size={80} loading={true} color='#ef233c' />
+                    <RingLoader css={Spinnercss} size={100} loading={true} color='#ef233c' />
                 </div>
             </React.Fragment>
         )
