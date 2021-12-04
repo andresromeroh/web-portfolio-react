@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Spinnercss } from './CustomStyled';
-import ClipLoader from 'react-spinners/ClipLoader';
+import PuffLoader from 'react-spinners/PuffLoader';
 
 export default class AppSpinner extends Component {
     render() {
         return (
             <React.Fragment>
                 <div className="application-spinner">
-                    <ClipLoader css={Spinnercss} size={30} loading={true} color='#ef233c' />
+                    <PuffLoader css={Spinnercss} size={100} loading={true} color='#ef233c' />
                 </div>
             </React.Fragment>
         )
