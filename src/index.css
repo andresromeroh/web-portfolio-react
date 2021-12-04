@@ -216,12 +216,10 @@ a, a:visited, a:active { color: inherit; }
   padding: 12px;
   transition: transform .8s;
   margin: 0 auto;
-  filter: grayscale(70%);
 }
 
 .zoom:hover { 
   transform: scale(1.2);
-  filter: grayscale(20%);
 }
 
 /* Projects */
