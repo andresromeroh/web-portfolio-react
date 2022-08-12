@@ -35,7 +35,7 @@ export default class ProfileIntro extends Component {
                             <MarginRow className='align-items-center text-center'>
                                 <Col>
                                     <LinkButton
-                                        text='CHECK MY PROJECTS'
+                                        text='GitHub Projects'
                                         size='lg'
                                         action='/projects'
                                     />
