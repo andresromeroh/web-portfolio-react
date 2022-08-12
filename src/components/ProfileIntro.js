@@ -37,7 +37,7 @@ export default class ProfileIntro extends Component {
                                     <LinkButton
                                         text='GitHub Projects'
                                         size='lg'
-                                        action='/projects'
+                                        action='/github-projects'
                                     />
                                 </Col>
                             </MarginRow>

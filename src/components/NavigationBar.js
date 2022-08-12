@@ -47,9 +47,9 @@ class NavigationBar extends Component {
                                     About
                                 </span>
                             </Nav.Link>
-                            <Nav.Link name='projects' href='/projects'>
-                                <span className={ currentPage === '/projects' ? 'span-link' : '' }>
-                                    Projects
+                            <Nav.Link name='projects' href='/github-projects'>
+                                <span className={ currentPage === '/github-projects' ? 'span-link' : '' }>
+                                    GitHub Projects
                                 </span>
                             </Nav.Link>
                             <Nav.Link name='email' href='/contact'>
