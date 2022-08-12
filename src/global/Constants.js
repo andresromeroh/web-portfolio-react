@@ -4,11 +4,11 @@ export const BACKEND_DESCRIPTION =
 
 export const FRONTEND_DESCRIPTION =
     `Either you need someone able to work with frameworks like 
-    React or Angular, or someone to work with plain Javascript I got you covered.`;
+    React or Vue, or someone to work with plain Javascript I got you covered.`;
 
 export const CLOUD_DESCRIPTION =
     `Looking to implement cloud native solutions? I work with some of the most popular
-    cloud providers like IBM and AWS to build and deploy applications.`;
+    cloud providers like AWS, GCP and IBM to build and deploy applications.`;
 
 export const BACKEND_ICON = 'ion-android-settings';
 export const FRONTEND_ICON = 'ion-code';
