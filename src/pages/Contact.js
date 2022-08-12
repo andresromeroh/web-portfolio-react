@@ -100,7 +100,7 @@ export default class Contact extends Component {
                                     />
                                 </Form.Group>
                                 <Col className='mt-5' md={{ span: 8, offset: 2 }}>
-                                    <SubmitButton text='SEND' size='lg'/>
+                                    <SubmitButton text='Send' size='lg'/>
                                 </Col>
                             </Form>
                         </Row>
