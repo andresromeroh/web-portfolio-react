@@ -21,7 +21,7 @@ export default class BaseService {
         if (process.env.NODE_ENV === 'development') {
             return `http://localhost:5000/api/v1${baseUrl}`;
         } else {
-            return `https://andresromero-dev.herokuapp.com/api/v1${baseUrl}`;
+            return `https://web-portfolio-backend.onrender.com/api/v1${baseUrl}`;
         }
     }
 }
