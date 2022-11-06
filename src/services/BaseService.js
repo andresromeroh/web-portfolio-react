@@ -19,9 +19,9 @@ export default class BaseService {
 
     initUrl(baseUrl) {
         if (process.env.NODE_ENV === 'development') {
-            return `http://localhost:5000/api/v1${baseUrl}`;
+            return `http://localhost:5000/v1${baseUrl}`;
         } else {
-            return `https://api.andresromero.dev/api/v1${baseUrl}`;
+            return `https://api.andresromero.dev/v1${baseUrl}`;
         }
     }
 }
