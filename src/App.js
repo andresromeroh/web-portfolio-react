@@ -23,7 +23,7 @@ function App() {
                 <NavigationBar />
                 <Switch>
                     <Route path='/' exact component={About} />
-                    <Route path='/github-projects' exact component={Projects} />
+                    <Route path='/projects' exact component={Projects} />
                     <Route path='/contact' exact component={Contact} />
                     <Route path='/*' component={NotFound} />
                 </Switch>
