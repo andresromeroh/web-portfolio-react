@@ -19,7 +19,7 @@ const INTRO =
     <p className='intro-script'>
         Hello! I am <strong style={{ color: '#ef233c' }}>Andrés</strong>. 
         I'm a Software Engineer based in Heredia, Costa Rica. 
-        Let me develop that app you've been thinking off!.
+        Let me develop that app you've been thinking off.
     </p>
 
 export default class ProfileIntro extends Component {
