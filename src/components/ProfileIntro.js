@@ -18,8 +18,8 @@ const MarginRow = styled(Row)`
 const INTRO =
     <p className='intro-script'>
         Hello! I am <strong style={{ color: '#ef233c' }}>Andrés</strong>. 
-        I'm a Full-Stack Software Engineer based in Heredia, Costa Rica. 
-        Passionate about Cloud and Web technologies.
+        I'm a Software Engineer based in Heredia, Costa Rica. 
+        Let me develop that app you've been thinking off!.
     </p>
 
 export default class ProfileIntro extends Component {
@@ -35,7 +35,7 @@ export default class ProfileIntro extends Component {
                             <MarginRow className='align-items-center text-center'>
                                 <Col>
                                     <LinkButton
-                                        text='GitHub Projects'
+                                        text='Check My Projects'
                                         size='lg'
                                         action='/github-projects'
                                     />
